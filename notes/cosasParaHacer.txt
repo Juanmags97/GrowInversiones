@@ -1,0 +1,10 @@
+ajustar bien el formato al diseño que envio
+cambiar la posicion y el logo del wp
+cambiar las imagenes con las correspondientes en el Hero.jsx
+    https://drive.google.com/file/d/1-DAVUMtuRbVRzTOJ3JVTnI23i_e3ZtqB/view
+    https://drive.google.com/file/d/16lt0m19YRRxzxJxmJSNhfanEsXPLcMX6/view
+    https://drive.google.com/file/d/1A6pvhkbmds2qiTb8DHjhTW0Y9u9QdP7v/view
+verificar que el link del video este habilitado
+    (link del video)
+crear db en googlesheet
+cambiar las es br us por banderas

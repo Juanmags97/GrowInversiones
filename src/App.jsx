@@ -2,8 +2,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
-import ProjectShowcase from './components/ProjectShowcase';
-import IntegrationSection from './components/IntegrationSection';
+import ProjectShowcase from './components/projectshowcase';
+import IntegrationSection from './components/integrationsection';
 
 export default function App() {
   return (
