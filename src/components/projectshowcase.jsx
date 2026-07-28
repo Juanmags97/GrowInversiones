@@ -42,7 +42,7 @@ export default function ProjectShowcase() {
             className="relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957] aspect-[9/16] max-w-sm mx-auto w-full flex items-center justify-center group"
           >
             <video
-              src="/VideoGrow.mp4" // Tu video comprimido listo para producción
+              src={`${import.meta.env.BASE_URL}VideoGrow.mp4`} // Tu video comprimido listo para producción
               controls
               className="w-full h-full object-cover"
             />

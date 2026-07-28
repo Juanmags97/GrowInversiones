@@ -12,14 +12,14 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Fondo oficial del manual #1D2733 */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1D2733]/95 backdrop-blur-md border-b border-white/5 px-6 py-3">
+      {/* Fondo oficial del manual #1D2733 - Reforzado con z-[100] para que nada lo pise */}
+      <nav className="fixed top-0 left-0 right-0 z-[100] bg-[#1D2733]/95 backdrop-blur-md border-b border-white/5 px-6 py-3">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
 
           {/* LOGOTIPO CON IMAGEN PNG */}
           <a href="#inicio" className="flex items-center group">
             <img
-              src="/GwLogo.png" // Corregido para que apunte bien a tu carpeta public
+              src={`${import.meta.env.BASE_URL}GwLogo.png`} // Corregido para que apunte bien a tu carpeta public
               alt="GW Desarrollos Logo"
               className="h-[75px] w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
@@ -44,30 +44,32 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* BANDERAS DE IDIOMAS CON EVENTO CLICK */}
-          <div className="flex items-center space-x-3 bg-white/5 p-2 rounded-lg border border-white/10">
-            <span 
+          {/* BANDERAS DE IDIOMAS CON IMÁGENES COMPATIBLES CON WINDOWS */}
+          {/* Reemplazó por completo al bloque de emojis anterior */}
+          <div className="relative z-50 flex items-center space-x-4 bg-white/5 p-2 rounded-lg border border-white/10">
+            <img 
               onClick={() => cambiarIdioma('es')} 
-              className="cursor-pointer text-lg hover:scale-110 transition-transform" 
+              src="https://flagcdn.com/w40/es.png" 
+              alt="Español"
+              className="w-6 h-auto cursor-pointer rounded-sm hover:scale-110 transition-transform shadow-sm"
               title="Español"
-            >
-              🇪🇸
-            </span>
-            <span 
+            />
+            <img 
               onClick={() => cambiarIdioma('pt')} 
-              className="cursor-pointer text-lg hover:scale-110 transition-transform" 
+              src="https://flagcdn.com/w40/br.png" 
+              alt="Portugués"
+              className="w-6 h-auto cursor-pointer rounded-sm hover:scale-110 transition-transform shadow-sm"
               title="Portugués"
-            >
-              🇧🇷
-            </span>
-            <span 
+            />
+            <img 
               onClick={() => cambiarIdioma('en')} 
-              className="cursor-pointer text-lg hover:scale-110 transition-transform" 
+              src="https://flagcdn.com/w40/us.png" 
+              alt="English"
+              className="w-6 h-auto cursor-pointer rounded-sm hover:scale-110 transition-transform shadow-sm"
               title="English"
-            >
-              🇺🇸
-            </span>
+            />
           </div>
+
         </div>
       </nav>
     </>

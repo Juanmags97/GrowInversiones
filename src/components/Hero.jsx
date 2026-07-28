@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // <-- Hook importado correctamente
 
+// Cambiá la lista de imágenes para que incluya la base URL dinámica
 const IMAGES = [
-  "/DeptoPanoramico.jpg",
-  "/FachadaPanoramica.jpg",
-  "/RenderRecepcion.jpg"
+  `${import.meta.env.BASE_URL}DeptoPanoramico.jpg`,
+  `${import.meta.env.BASE_URL}FachadaPanoramica.jpg`,
+  `${import.meta.env.BASE_URL}RenderRecepcion.jpg`
 ];
 
 export default function Hero() {
