@@ -5,6 +5,6 @@ cambiar las imagenes con las correspondientes en el Hero.jsx
     https://drive.google.com/file/d/16lt0m19YRRxzxJxmJSNhfanEsXPLcMX6/view
     https://drive.google.com/file/d/1A6pvhkbmds2qiTb8DHjhTW0Y9u9QdP7v/view
 verificar que el link del video este habilitado
-    (link del video)
+    https://drive.google.com/file/d/1e8gadzzwCdsQzcR9i5myELaCdrAlu4qw/view
 crear db en googlesheet
 cambiar las es br us por banderas

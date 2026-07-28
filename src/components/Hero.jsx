@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80", // Reemplazar por Drive Imagen 1
-  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80", // Reemplazar por Drive Imagen 2
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"  // Reemplazar por Drive Imagen 3
+  "/Depto formato panoramico 2.jpg",
+  "/Fachada panoramica (1).jpg",
+  "/Render recepcion final 2.jpg"
 ];
 
 export default function Hero() {
@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* INDICADORES PARAGUAY */}
+        {/* INDICADORES PARAGUAY
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function Hero() {
               <span className="text-[10px] uppercase text-slate-400 tracking-wider">Mejor Calidad de Vida Región</span>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

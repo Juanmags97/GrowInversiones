@@ -5,7 +5,7 @@ export default function ProjectShowcase() {
   return (
     <section id="del-sol" className="py-24 bg-[#060a13] border-t border-slate-950">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,18 +26,17 @@ export default function ProjectShowcase() {
           </div>
 
           {/* CONTENEDOR DEL VIDEO PRESENTACIÓN */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-[#0b1120] aspect-video flex items-center justify-center group"
+            className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-[#0b1120] aspect-[9/16] max-w-sm mx-auto w-full flex items-center justify-center group"
           >
-            <iframe 
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="GW Video Presentacion"
-              className="w-full h-full border-0 absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity"
-              allowFullScreen
-            ></iframe>
+            <video
+              src="/VideoGrow.mp4"
+              controls
+              className="w-full h-full object-cover"
+            />
           </motion.div>
         </div>
       </div>
