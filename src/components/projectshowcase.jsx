@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // <-- 1. Importamos el hook
-
+import video from '../../Public/VideoGrow.mp4'; // Asegúrate de que la ruta sea correcta
 export default function ProjectShowcase() {
   const { t } = useTranslation(); // <-- 2. Declaramos la función t
 
@@ -42,7 +42,7 @@ export default function ProjectShowcase() {
             className="relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957] aspect-[9/16] max-w-sm mx-auto w-full flex items-center justify-center group"
           >
             <video
-              src={`${import.meta.env.BASE_URL}VideoGrow.mp4`} // Tu video comprimido listo para producción
+              src={video} // Tu video comprimido listo para producción
               controls
               className="w-full h-full object-cover"
             />

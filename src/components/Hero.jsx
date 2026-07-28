@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // <-- Hook importado correctamente
+import DeptoPanoramico from '../../Public/DeptoPanoramico.jpg';
+import FachadaPanoramica from '../../Public/FachadaPanoramica.jpg';
+import RenderRecepcion from '../../Public/RenderRecepcion.jpg';
+
 
 // Cambiá la lista de imágenes para que incluya la base URL dinámica
 const IMAGES = [
-  `${import.meta.env.BASE_URL}DeptoPanoramico.jpg`,
-  `${import.meta.env.BASE_URL}FachadaPanoramica.jpg`,
-  `${import.meta.env.BASE_URL}RenderRecepcion.jpg`
+  DeptoPanoramico,
+  FachadaPanoramica,
+  RenderRecepcion
 ];
+
+
 
 export default function Hero() {
   const { t } = useTranslation(); // <-- Declaración interna del traductor

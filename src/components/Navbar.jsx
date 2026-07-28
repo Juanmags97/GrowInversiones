@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // <-- Importamos el hook de traducción
+import logo from '../../Public/GwLogo.png';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation(); // <-- Declaramos las funciones de traducción
@@ -19,7 +20,7 @@ export default function Navbar() {
           {/* LOGOTIPO CON IMAGEN PNG */}
           <a href="#inicio" className="flex items-center group">
             <img
-              src={`${import.meta.env.BASE_URL}GwLogo.png`} // Corregido para que apunte bien a tu carpeta public
+              src={logo} // Corregido para que apunte bien a tu carpeta public
               alt="GW Desarrollos Logo"
               className="h-[75px] w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
