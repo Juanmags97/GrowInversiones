@@ -20,7 +20,7 @@ export default function App() {
       <div className="group fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center hoverWap bg-[#1D2733]/60 backdrop-blur-md border border-[#DFC173]/20 rounded-l-xl py-6 px-3 space-y-8 text-[10px] uppercase tracking-[0.2em] text-white">
 
         <a
-          href="https://wa.me/tu-numero-aqui"
+          href="https://wa.me/+595976793364"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 hover:text-[#DFC173] transition-colors duration-400 py-2 cursor-pointer"
