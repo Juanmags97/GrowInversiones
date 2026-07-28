@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const IMAGES = [
-  "/Depto formato panoramico 2.jpg",
-  "/Fachada panoramica (1).jpg",
-  "/Render recepcion final 2.jpg"
+  "/DeptoFormatoPanoramico2.jpg",
+  "/FachadaPanoramica1.jpg",
+  "/RenderRecepcionFinal2.jpg"
 ];
 
 export default function Hero() {
@@ -42,9 +42,9 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.3em] block mb-3">
+          {/* <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.3em] block mb-3">
             Desarrollamos espacios para quienes eligen invertir
-          </span>
+          </span> */}
           <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white leading-tight">
             Construimos espacios para quienes eligen <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-[#aa841a] italic">crecer.</span>
           </h1>

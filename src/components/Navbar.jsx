@@ -30,7 +30,7 @@ export default function Navbar() {
       </nav>
 
       {/* BOTÓN ESTÁTICO DE WHATSAPP / DORADO FLOTANTE */}
-      <a 
+      {/* <a 
         href="https://wa.me/tu_numero" 
         target="_blank" 
         rel="noopener noreferrer"
@@ -40,7 +40,7 @@ export default function Navbar() {
         <span className="absolute right-14 top-3 bg-neutral-950 text-[#d4af37] text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded border border-[#d4af37]/30 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
           Conversar
         </span>
-      </a>
+      </a> */}
     </>
   );
 }

@@ -6,27 +6,83 @@
 
 :root {
   /* Colores Oficiales del Manual de Marca GW */
-  --color-brand-blue-dark: #1D2733;  /* Azul verdoso oscuro primario */
-  --color-brand-blue-light: #1E3957; /* Azul verdoso claro secundario */
-  --color-brand-gold-light: #DFC173; /* Dorado claro primario */
-  --color-brand-gold-dark: #D5A361;  /* Dorado intenso secundario */
-  --color-brand-bg-gray: #EEEEEE;    /* Gris claro */
+  --color-brand-blue-dark: #1D2733;
+  /* Azul verdoso oscuro primario */
+  --color-brand-blue-light: #1E3957;
+  /* Azul verdoso claro secundario */
+  --color-brand-gold-light: #DFC173;
+  /* Dorado claro primario */
+  --color-brand-gold-dark: #D5A361;
+  /* Dorado intenso secundario */
+  --color-brand-bg-gray: #EEEEEE;
+  /* Gris claro */
 }
 
 body {
-  background-color: var(--color-brand-blue-dark); /* Color base del manual */
+  background-color: var(--color-brand-blue-dark);
+  /* Color base del manual */
   color: #FFFFFF;
-  font-family: 'Inter', sans-serif; /* Para emular la estructura de Garet */
+  font-family: 'Inter', sans-serif;
+  /* Para emular la estructura de Garet */
   -webkit-font-smoothing: antialiased;
 }
 
 /* Tipografía de Títulos Oficial del Manual */
-h1, h2, h3, h4, .font-serif {
+h1,
+h2,
+h3,
+h4,
+.font-serif {
   font-family: 'Inria Serif', serif;
   letter-spacing: -0.01em;
 }
 
 /* Utilidades rápidas para bordes finos de la marca */
 .border-brand-fine {
-  border-color: rgba(223, 193, 115, 0.15); /* Borde dorado ultra sutil */
+  border-color: rgba(223, 193, 115, 0.15);
+  /* Borde dorado ultra sutil */
+}
+
+.hoverWap:hover {
+  /* width: 10dvb; */
+  animation: aparece 0.5s ease-in-out forwards;
+
+
+}
+
+
+.btnwap {
+  /* animation-delay: 1s; */
+  animation: btn-wp 0.5s forwards;
+}
+
+@keyframes aparece {
+  from {
+    /* opacity: 0; */
+    width: 22px;
+    padding: 24px;
+
+
+  }
+
+  to {
+    /* opacity: 1; */
+    width: 30dvb;
+
+  }
+}
+
+@keyframes btn-wp {
+  from {
+    opacity: 0;
+    display: none;
+
+
+  }
+
+  to {
+    opacity: 1;
+    display: block;
+
+  }
 }

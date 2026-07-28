@@ -17,8 +17,10 @@ export default function ParaguayStats() {
         </div>
 
         {/* COLUMNA DERECHA: LAS 4 MÉTRICAS EN HORIZONTAL */}
-        <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-8 pt-2">
-          
+        {/* <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-8 pt-2 "> */}
+        <div className="grid-cols-4 md:flex  gap-8 pt-2 ">
+
+          <div className='hidden border w-0 md:block'></div>
           {/* Métrica 1 */}
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
@@ -27,9 +29,10 @@ export default function ParaguayStats() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-2"
           >
-            <span className="text-2xl md:text-3xl font-light text-white block">+4,5%</span>
+            <span className="text-2xl  md:text-3xl font-light text-white block">+4,5%</span>
             <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase">Crecimiento Promedio PBI</p>
           </motion.div>
+          <div className='hidden border w-0 md:block '></div>
 
           {/* Métrica 2 */}
           <motion.div 
@@ -42,6 +45,7 @@ export default function ParaguayStats() {
             <span className="text-2xl md:text-3xl font-light text-white block">+USD 1.200 M</span>
             <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase">Inversión Extranjera Directa</p>
           </motion.div>
+          <div className='hidden border w-0 md:block'></div>
 
           {/* Métrica 3 */}
           <motion.div 
@@ -54,6 +58,7 @@ export default function ParaguayStats() {
             <span className="text-2xl md:text-3xl font-light text-white block">2°</span>
             <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase">País con Mayor Rentabilidad</p>
           </motion.div>
+          <div className='hidden border w-0 md:block'></div>
 
           {/* Métrica 4 */}
           <motion.div 
