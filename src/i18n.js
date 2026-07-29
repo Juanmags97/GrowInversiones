@@ -41,6 +41,37 @@ const resources = {
         "lanzamiento": "Lanzamiento Exclusivo",
         "descripcion": "Ubicado en el polo de mayor crecimiento corporativo y residencial de Asunción, a pasos del Shopping del Sol y del World Trade Center. Un diseño arquitectónico de vanguardia con terminaciones de lujo.",
         "boton": "Conocer Proyecto"
+      },
+      "integration": {
+        "newsletterTitulo": "Newsletter",
+        "newsletterDescripcion": "Recibí las últimas novedades del mercado inmobiliario y oportunidades exclusivas.",
+        "newsletterBoton": "Suscribirme",
+        "instagramTitulo": "Conectá con nosotros:",
+        "formTitulo": "Dejanos tus datos",
+        "formDescripcion": "Un asesor experto se pondrá en contacto a la brevedad.",
+        "formUnidad": "¿Qué tipo de unidad estás buscando?",
+        "formEdad": "¿Cuál es tu rango de edad?",
+        "formFactor": "¿Qué factor valorás más?",
+        "formEnviar": "Enviar Requerimientos",
+        "formUnidadOpciones": {
+          "1Dormitorio": "Departamento 1 Dormitorio",
+          "2Dormitorios": "Departamento 2 Dormitorios",
+          "Penthouse": "Penthouse / Premium"
+        },
+        "formFactorOpciones": {
+          "Ubicacion": "Ubicación y Conectividad",
+          "Amenities": "Amenities Premium",
+          "Rentabilidad": "Rentabilidad del Pozo"
+        },
+        "formEdadPlaceholder": "Ej: 30 - 45 años",
+        "formEmailPlaceholder": "Tu correo electrónico",
+        "formEmailBoton": "Suscribirme",
+        "formEmailAviso": "Recibirás novedades y oportunidades exclusivas.",
+        "formEmailAvisoPrivacidad": "Nos comprometemos a proteger tu privacidad y nunca compartiremos tus datos.",
+        "formEmailAvisoPrivacidadLink": "Política de Privacidad",
+        "formEmailAvisoPrivacidadLinkHref": "/politica-de-privacidad",
+        
+
       }
     }
   },
