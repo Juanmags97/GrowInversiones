@@ -9,18 +9,24 @@ export default function ProjectShowcase() {
     // Fondo oficial #1D2733 del manual de marca
     <section id="del-sol" className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
-        
-        {/* TÍTULO PRINCIPAL */}
+
+       
+        {/* ENCABEZADO PRINCIPAL CON LOGO IMPACTANTE */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 flex flex-col items-center justify-center space-y-4"
         >
           <span className="text-[#DFC173] text-xs font-bold uppercase tracking-widest">
             {t('showcase.lanzamiento')}
           </span>
-          <h2 className="text-4xl font-serif text-white mt-2">GW Del Sol</h2>
+          {/* Logo más grande y responsivo: 80px en móvil, 120px en escritorio */}
+          <img
+            src={`${import.meta.env.BASE_URL}LogoGW.png`}
+            alt="GW Del Sol"
+            className="h-20 md:h-[120px] w-auto object-contain mt-2"
+          />
         </motion.div>
 
         {/* 1. SECCIÓN SUPERIOR: VIDEO PRINCIPAL A ANCHO COMPLETO */}
@@ -39,9 +45,9 @@ export default function ProjectShowcase() {
 
         {/* 2. SECCIÓN INFERIOR: GRILLA DE 2 COLUMNAS (TEXTO vs UBICACIÓN) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
+
           {/* COLUMNA INFERIOR IZQUIERDA: TEXTOS Y BOTÓN */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -68,7 +74,7 @@ export default function ProjectShowcase() {
                 GW DEL SOL, Asunción, Paraguay
               </span>
             </div>
-            
+
             {/* Mapa interactivo con las coordenadas reales actualizadas */}
             <div className="w-full h-60 rounded-xl overflow-hidden grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 border border-white/5">
               <iframe
