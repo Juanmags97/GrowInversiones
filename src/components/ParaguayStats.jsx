@@ -1,9 +1,43 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next'; // <-- 1. Importamos el hook
+import React, { useEffect, useRef } from 'react';
+import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+
+// Componente animado para la métrica 1 (+4,5%)
+function CounterPBI() {
+  const nodeRef = useRef(null);
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => `+${latest.toFixed(1)}%`);
+  const isInView = useInView(nodeRef, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, 4.5, { duration: 2, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [isInView]);
+
+  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-light text-white block">{rounded}</motion.span>;
+}
+
+// Componente animado para la métrica 2 (+USD 1.200 M)
+function CounterInversion() {
+  const nodeRef = useRef(null);
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => `+USD ${Math.round(latest).toLocaleString('es-AR')} M`);
+  const isInView = useInView(nodeRef, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, 1200, { duration: 2, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [isInView]);
+
+  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-light text-white block">{rounded}</motion.span>;
+}
 
 export default function ParaguayStats() {
-  const { t } = useTranslation(); // <-- 2. Declaramos la función t
+  const { t } = useTranslation();
 
   return (
     <section className="bg-gradient-to-b from-black to-[#1D2733] text-white py-20 border-t border-white/5">
@@ -25,11 +59,12 @@ export default function ParaguayStats() {
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -6 }} // <-- Efecto hover interactivo estilo Misión/Visión
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-2"
+            transition={{ duration: 0.5 }}
+            className="space-y-2 cursor-default flex-1"
           >
-            <span className="text-2xl md:text-3xl font-light text-white block">+4,5%</span>
+            <CounterPBI />
             <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase">
               {t('stats.pbi')}
             </p>
@@ -41,11 +76,12 @@ export default function ParaguayStats() {
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -6 }} // <-- Efecto hover interactivo estilo Misión/Visión
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-2"
+            transition={{ duration: 0.5 }}
+            className="space-y-2 cursor-default flex-1"
           >
-            <span className="text-2xl md:text-3xl font-light text-white block">+USD 1.200 M</span>
+            <CounterInversion />
             <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase">
               {t('stats.inversion')}
             </p>
@@ -57,9 +93,10 @@ export default function ParaguayStats() {
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -6 }} // <-- Efecto hover interactivo estilo Misión/Visión
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-2"
+            transition={{ duration: 0.5 }}
+            className="space-y-2 cursor-default flex-1"
           >
             <span className="text-2xl md:text-3xl font-light text-white block">2°</span>
             <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase">
@@ -73,9 +110,10 @@ export default function ParaguayStats() {
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -6 }} // <-- Efecto hover interactivo estilo Misión/Visión
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="space-y-2"
+            transition={{ duration: 0.5 }}
+            className="space-y-2 cursor-default flex-1"
           >
             <span className="text-2xl md:text-3xl font-light text-white block">Top 10</span>
             <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase">

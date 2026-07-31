@@ -38,7 +38,7 @@ export default function ProjectShowcase() {
         </motion.div>
 
         {/* 2. SECCIÓN INFERIOR: GRILLA DE 2 COLUMNAS (TEXTO vs UBICACIÓN) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-center items-center ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
           {/* COLUMNA INFERIOR IZQUIERDA: TEXTOS Y BOTÓN */}
           <motion.div 
@@ -47,15 +47,15 @@ export default function ProjectShowcase() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <p className="text-neutral-300 text-l text-center leading-relaxed">
+            <p className="text-neutral-300 text-sm leading-relaxed">
               {t('showcase.descripcion')}
             </p>
-            <button className="border border-[#DFC173] text-[#DFC173] px-6 py-2 m-auto rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300">
+            <button className="border border-[#DFC173] text-[#DFC173] px-6 py-2 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300">
               {t('showcase.boton')} →
             </button>
           </motion.div>
 
-          {/* COLUMNA INFERIOR DERECHA: MAPA DE UBICACIÓN */}
+          {/* COLUMNA INFERIOR DERECHA: MAPA DE UBICACIÓN OFICIAL */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,15 +65,15 @@ export default function ProjectShowcase() {
             <div className="flex items-center space-x-2 text-[#DFC173]">
               <i className="fa-solid fa-location-dot text-sm"></i>
               <span className="text-white text-xs font-bold uppercase tracking-wider">
-                San Juan XXIII, Asunción, Paraguay
+                GW DEL SOL, Asunción, Paraguay
               </span>
             </div>
             
-            {/* Mapa interactivo integrado */}
+            {/* Mapa interactivo con las coordenadas reales actualizadas */}
             <div className="w-full h-60 rounded-xl overflow-hidden grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 border border-white/5">
               <iframe
                 title="Ubicación GW Del Sol"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.4764841961937!2d-57.56846182377319!3d-25.288195827367358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da8a57b28203d%3A0x6b110fb13a893414!2sSan%20Juan%20XXIII%2C%20Asunci%C3%B3n!5e0!3m2!1ses-419!2spy!4v1710000000000!5m2!1ses-419!2spy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d858.7423851532051!2d-57.5661461!3d-25.2816153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da7001efe306b%3A0xc30e79ec9d25c1cd!2sGW%20DEL%20SOL!5e0!3m2!1ses-419!2spy!4v1710000000000!5m2!1ses-419!2spy"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
