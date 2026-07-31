@@ -38,7 +38,7 @@ export default function ProjectShowcase() {
         </motion.div>
 
         {/* 2. SECCIÓN INFERIOR: GRILLA DE 2 COLUMNAS (TEXTO vs UBICACIÓN) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-center items-center ">
           
           {/* COLUMNA INFERIOR IZQUIERDA: TEXTOS Y BOTÓN */}
           <motion.div 
@@ -47,10 +47,10 @@ export default function ProjectShowcase() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <p className="text-neutral-300 text-sm leading-relaxed">
+            <p className="text-neutral-300 text-l text-center leading-relaxed">
               {t('showcase.descripcion')}
             </p>
-            <button className="border border-[#DFC173] text-[#DFC173] px-6 py-2 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300">
+            <button className="border border-[#DFC173] text-[#DFC173] px-6 py-2 m-auto rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300">
               {t('showcase.boton')} →
             </button>
           </motion.div>

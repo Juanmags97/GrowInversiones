@@ -1,4 +1,3 @@
-// src/i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -69,9 +68,7 @@ const resources = {
         "formEmailAviso": "Recibirás novedades y oportunidades exclusivas.",
         "formEmailAvisoPrivacidad": "Nos comprometemos a proteger tu privacidad y nunca compartiremos tus datos.",
         "formEmailAvisoPrivacidadLink": "Política de Privacidad",
-        "formEmailAvisoPrivacidadLinkHref": "/politica-de-privacidad",
-        
-
+        "formEmailAvisoPrivacidadLinkHref": "/politica-de-privacidad"
       }
     }
   },
@@ -85,10 +82,10 @@ const resources = {
         "contacto": "Contato"
       },
       "hero": {
-        "titulo": "Construídos espaços para quem escolhe crescer."
+        "titulo": "Construímos espaços para quem escolhe crescer."
       },
       "contacto": {
-        "titulo": "Deixe seus datos",
+        "titulo": "Deixe seus dados",
         "bajada": "Um consultor especializado entrará em contato o mais breve possível.",
         "boton": "Enviar Requisitos"
       },
@@ -113,6 +110,35 @@ const resources = {
         "lanzamiento": "Lançamento Exclusivo",
         "descripcion": "Localizado no polo de maior crescimento corporativo e residencial de Assunção, a poucos passos do Shopping del Sol e do World Trade Center. Um projeto arquitetônico de vanguarda com acabamentos de luxo.",
         "boton": "Conhecer o Projeto"
+      },
+      "integration": {
+        "newsletterTitulo": "Newsletter",
+        "newsletterDescripcion": "Receba as últimas novidades do mercado imobiliário e oportunidades exclusivas.",
+        "newsletterBoton": "Inscrever-me",
+        "instagramTitulo": "Conecte-se conosco:",
+        "formTitulo": "Deixe seus dados",
+        "formDescripcion": "Um consultor especializado entrará em contato o mais breve possível.",
+        "formUnidad": "Que tipo de unidade você está procurando?",
+        "formEdad": "Qual é a sua faixa etária?",
+        "formFactor": "Qual fator você mais valoriza?",
+        "formEnviar": "Enviar Requisitos",
+        "formUnidadOpciones": {
+          "1Dormitorio": "Apartamento 1 Dormitório",
+          "2Dormitorios": "Apartamento 2 Dormitórios",
+          "Penthouse": "Cobertura / Premium"
+        },
+        "formFactorOpciones": {
+          "Ubicacion": "Localização e Conectividade",
+          "Amenities": "Comodidades Premium",
+          "Rentabilidad": "Rentabilidade na Planta"
+        },
+        "formEdadPlaceholder": "Ex: 30 - 45 anos",
+        "formEmailPlaceholder": "Seu e-mail",
+        "formEmailBoton": "Inscrever-me",
+        "formEmailAviso": "Você receberá novidades e oportunidades exclusivas.",
+        "formEmailAvisoPrivacidad": "Comprometemo-nos a proteger sua privacidade e nunca compartilharemos seus dados.",
+        "formEmailAvisoPrivacidadLink": "Política de Privacidade",
+        "formEmailAvisoPrivacidadLinkHref": "/politica-de-privacidade"
       }
     }
   },
@@ -154,6 +180,35 @@ const resources = {
         "lanzamiento": "Exclusive Launch",
         "descripcion": "Located in the hub of greatest corporate and residential growth in Asunción, just steps away from Shopping del Sol and the World Trade Center. A cutting-edge architectural design with luxury finishes.",
         "boton": "Discover Project"
+      },
+      "integration": {
+        "newsletterTitulo": "Newsletter",
+        "newsletterDescripcion": "Receive the latest real estate market news and exclusive opportunities.",
+        "newsletterBoton": "Subscribe",
+        "instagramTitulo": "Connect with us:",
+        "formTitulo": "Leave us your details",
+        "formDescripcion": "An expert advisor will contact you shortly.",
+        "formUnidad": "What type of unit are you looking for?",
+        "formEdad": "What is your age range?",
+        "formFactor": "Which factor do you value most?",
+        "formEnviar": "Send Requirements",
+        "formUnidadOpciones": {
+          "1Dormitorio": "1-Bedroom Apartment",
+          "2Dormitorios": "2-Bedroom Apartment",
+          "Penthouse": "Penthouse / Premium"
+        },
+        "formFactorOpciones": {
+          "Ubicacion": "Location and Connectivity",
+          "Amenities": "Premium Amenities",
+          "Rentabilidad": "Off-Plan Profitability"
+        },
+        "formEdadPlaceholder": "E.g., 30 - 45 years old",
+        "formEmailPlaceholder": "Your email address",
+        "formEmailBoton": "Subscribe",
+        "formEmailAviso": "You will receive exclusive updates and opportunities.",
+        "formEmailAvisoPrivacidad": "We are committed to protecting your privacy and will never share your data.",
+        "formEmailAvisoPrivacidadLink": "Privacy Policy",
+        "formEmailAvisoPrivacidadLinkHref": "/privacy-policy"
       }
     }
   }

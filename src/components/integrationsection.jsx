@@ -19,12 +19,12 @@ export default function IntegrationSection() {
   return (
     <section className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 space-y-16">
-        
+
         {/* PARTE SUPERIOR: NEWSLETTER (IZQUIERDA) + INSTAGRAM (DERECHA) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          
+
           {/* NEWSLETTER */}
-          <div className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl">
+          <div className="bg-[#1E3957] m-auto border border-white/5 p-8 rounded-2xl">
             <h3 className="text-white font-serif text-xl mb-3">Newsletter</h3>
             <p className="text-xs text-neutral-400 mb-4">{t('integration.newsletterDescripcion')}</p>
             <div className="flex gap-2">
@@ -45,8 +45,8 @@ export default function IntegrationSection() {
               {t('integration.instagramTitulo')} <span className="text-[#DFC173]">@gwdesarrollos.py</span>
             </h4>
             <div className="bg-[#1E3957] border border-white/5 p-4 rounded-xl shadow-inner">
-              <div 
-                className="elfsight-app-7118408e-52ec-4bfd-9188-14e90ccdeb2d" 
+              <div
+                className="elfsight-app-7118408e-52ec-4bfd-9188-14e90ccdeb2d"
                 data-elfsight-app-lazy
               ></div>
             </div>
@@ -55,11 +55,12 @@ export default function IntegrationSection() {
         </div>
 
         {/* PARTE INFERIOR: FORMULARIO DETALLADO (ABAJO DEL WIDGET) */}
-        <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full">
+        <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full   md:w-1/2 items-center m-auto">
           <h3 className="text-white font-serif text-xl mb-2">{t('integration.formTitulo')}</h3>
           <p className="text-xs text-neutral-400 mb-6">{t('integration.formDescripcion')}</p>
 
-          <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-xs">
+
+          <form className="grid grid-cols-1 gap-6 text-xs">
             <div>
               <label className="text-neutral-400 block mb-1">{t('integration.formUnidad')}</label>
               <select className="w-full bg-[#1D2733] border border-white/10 text-slate-300 rounded p-3 focus:outline-none focus:border-[#DFC173]">

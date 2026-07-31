@@ -6,7 +6,7 @@ export default function ParaguayStats() {
   const { t } = useTranslation(); // <-- 2. Declaramos la función t
 
   return (
-    <section className="bg-[#1D2733] text-white py-20 border-t border-white/5">
+    <section className="bg-gradient-to-b from-black to-[#1D2733] text-white py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
         
         {/* COLUMNA IZQUIERDA: TÍTULO PRINCIPAL TRADUCIDO */}
