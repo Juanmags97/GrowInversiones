@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function IntegrationSection() {
-  const { t } = useTranslation(); // <-- Ahora sí, declarada adentro del componente
+  const { t } = useTranslation(); 
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -20,45 +20,24 @@ export default function IntegrationSection() {
     <section className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 space-y-16">
 
-        {/* PARTE SUPERIOR: NEWSLETTER (IZQUIERDA) + INSTAGRAM (DERECHA) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-
-          {/* NEWSLETTER */}
-          <div className="bg-[#1E3957] m-auto border border-white/5 p-8 rounded-2xl">
-            <h3 className="text-white font-serif text-xl mb-3">Newsletter</h3>
-            <p className="text-xs text-neutral-400 mb-4">{t('integration.newsletterDescripcion')}</p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Tu correo electrónico"
-                className="bg-[#1D2733] border border-white/10 rounded px-4 py-2 text-xs text-white w-full focus:outline-none focus:border-[#DFC173]"
-              />
-              <button className="bg-[#DFC173] text-[#1D2733] text-xs font-bold uppercase px-6 py-2 rounded tracking-wider hover:bg-[#D5A361] transition-colors">
-                {t('integration.newsletterBoton')}
-              </button>
-            </div>
+        {/* INSTAGRAM GRID: AHORA A ANCHO COMPLETO (Sin Newsletter) */}
+        <div className="w-full space-y-4">
+          <h4 className="text-white font-serif text-lg text-center md:text-left">
+            {t('integration.instagramTitulo')} <span className="text-[#DFC173]">@gwdesarrollos.py</span>
+          </h4>
+          <div className="bg-[#1E3957] border border border-white/5 p-4 rounded-2xl shadow-2xl w-full">
+            {/* Nuevo Widget de Elfsight a ancho completo */}
+            <div
+              className="elfsight-app-74bfe8d7-75a9-4dc5-9580-94fdc7120701"
+              data-elfsight-app-lazy
+            ></div>
           </div>
-
-          {/* INSTAGRAM GRID (UBICADO A LA DERECHA) */}
-          <div className="space-y-4">
-            <h4 className="text-white font-serif text-sm">
-              {t('integration.instagramTitulo')} <span className="text-[#DFC173]">@gwdesarrollos.py</span>
-            </h4>
-            <div className="bg-[#1E3957] border border-white/5 p-4 rounded-xl shadow-inner">
-              <div
-                className="elfsight-app-7118408e-52ec-4bfd-9188-14e90ccdeb2d"
-                data-elfsight-app-lazy
-              ></div>
-            </div>
-          </div>
-
         </div>
 
-        {/* PARTE INFERIOR: FORMULARIO DETALLADO (ABAJO DEL WIDGET) */}
-        <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full   md:w-1/2 items-center m-auto">
+        {/* PARTE INFERIOR: FORMULARIO DETALLADO (CENTRADITO ABAJO) */}
+        <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full md:w-1/2 items-center m-auto">
           <h3 className="text-white font-serif text-xl mb-2">{t('integration.formTitulo')}</h3>
           <p className="text-xs text-neutral-400 mb-6">{t('integration.formDescripcion')}</p>
-
 
           <form className="grid grid-cols-1 gap-6 text-xs">
             <div>
