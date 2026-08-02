@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-
+import logo from '../../Public/GwLogo3.png';
 export default function ProjectShowcase() {
   const { t } = useTranslation();
 
@@ -23,9 +23,9 @@ export default function ProjectShowcase() {
           </span>
           {/* Logo más grande y responsivo: 80px en móvil, 120px en escritorio */}
           <img
-            src={`${import.meta.env.BASE_URL}LogoGW.png`}
+            src={logo}
             alt="GW Del Sol"
-            className="h-20 md:h-[120px] w-auto object-contain mt-2"
+            className="h-20 md:h-[300px] w-auto object-contain mt-2"
           />
         </motion.div>
 
