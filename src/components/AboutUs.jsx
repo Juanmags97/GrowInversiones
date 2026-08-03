@@ -31,7 +31,7 @@ export default function AboutUs() {
             </p>
           </motion.div>
 
-          {/* BLOQUE CENTRAL: IMAGEN SOCIOS */}
+          {/* BLOQUE CENTRAL: IMAGEN SOCIOS A COLOR Y NÍTIDA */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -40,12 +40,10 @@ export default function AboutUs() {
             className="relative h-96 rounded-2xl overflow-hidden border border-white/5 shadow-2xl"
           >
             <img 
-              src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" 
+              src={`${import.meta.env.BASE_URL}FotosSocios.png`} 
               alt="Socios GW" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover transition-all duration-700"
             />
-            {/* Degradado adaptado al color base #1D2733 */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1D2733] via-transparent to-transparent" />
           </motion.div>
 
           {/* BLOQUE DERECHO: MISIÓN, VISIÓN, VALORES TRADUCIDOS */}
