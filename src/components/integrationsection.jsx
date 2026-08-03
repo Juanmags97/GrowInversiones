@@ -89,7 +89,7 @@ export default function IntegrationSection() {
             {/* BOTÓN ALINEADO CON LA GRILLA */}
             <div className="flex items-end">
               <button type="submit" className="w-full bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold uppercase py-3 rounded tracking-widest hover:shadow-lg hover:shadow-[#DFC173]/10 transition-all">
-                Enviar Requerimientos
+                {t("integration.formEnviar")}
               </button>
             </div>
           </form>

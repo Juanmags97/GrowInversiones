@@ -152,7 +152,7 @@ const resources = {
         "placeHolderPais": "Ex: Argentina, Uruguai, Brasil, Chile, México, Espanha, Estados Unidos",
         "contacto": "Deixe seu contato",
         "placeHolderCorreo": "Seu e-mail ou WhatsApp",
-
+        "formEnviar": "Enviar Requisitos",
         "formEmailPlaceholder": "Seu e-mail",
         "formEmailBoton": "Inscrever-me",
         "formEmailAviso": "Você receberá novidades e oportunidades exclusivas.",
@@ -231,6 +231,7 @@ const resources = {
         "placeHolderPais": "E.g., Argentina, Uruguay, Brazil, Chile, Mexico, Spain, United States",
         "contacto": "Leave us your contact information",
         "placeHolderCorreo": "Your email or WhatsApp",
+        "formEnviar": "Submit Requirements",
         "formEmailBoton": "Subscribe",
         "formEmailAviso": "You will receive exclusive updates and opportunities.",
         "formEmailAvisoPrivacidad": "We are committed to protecting your privacy and will never share your data.",
