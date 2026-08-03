@@ -10,7 +10,7 @@ export default function AboutUs() {
     <section id="quienes-somos" className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-          
+
           {/* BLOQUE IZQUIERDO: QUIÉNES SOMOS */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -31,26 +31,26 @@ export default function AboutUs() {
             </p>
           </motion.div>
 
-          {/* BLOQUE CENTRAL: IMAGEN SOCIOS A COLOR Y NÍTIDA */}
+          {/* BLOQUE CENTRAL: IMAGEN SOCIOS MÁS ALTA PARA QUE NO CORTE PIES */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-96 rounded-2xl overflow-hidden border border-white/5 shadow-2xl"
+            className="relative h-[520px] rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957]"
           >
-            <img 
-              src={`${import.meta.env.BASE_URL}FotosSocios.png`} 
-              alt="Socios GW" 
-              className="w-full h-full object-cover transition-all duration-700"
+            <img
+              src={`${import.meta.env.BASE_URL}FotosSocios.png`}
+              alt="Socios GW"
+              className="w-full h-full object-cover object-top transition-all duration-700"
             />
           </motion.div>
 
           {/* BLOQUE DERECHO: MISIÓN, VISIÓN, VALORES TRADUCIDOS */}
           <div className="space-y-6">
-            
+
             {/* Misión */}
-            <motion.div 
+            <motion.div
               whileHover={{ x: 6 }}
               className="p-5 bg-[#1E3957] border-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
@@ -63,7 +63,7 @@ export default function AboutUs() {
             </motion.div>
 
             {/* Visión */}
-            <motion.div 
+            <motion.div
               whileHover={{ x: 6 }}
               className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
@@ -76,7 +76,7 @@ export default function AboutUs() {
             </motion.div>
 
             {/* Valores */}
-            <motion.div 
+            <motion.div
               whileHover={{ x: 6 }}
               className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
@@ -87,7 +87,7 @@ export default function AboutUs() {
                 {t('about.valoresTexto')}
               </p>
             </motion.div>
-            
+
           </div>
 
         </div>
