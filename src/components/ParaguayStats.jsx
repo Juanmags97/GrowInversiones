@@ -16,7 +16,7 @@ function CounterPBI() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-light text-white block drop-shadow-md">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">{rounded}</motion.span>;
 }
 
 // Componente animado para la métrica 2 (+USD 1.200 M)
@@ -33,7 +33,7 @@ function CounterInversion() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-light text-white block drop-shadow-md">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">{rounded}</motion.span>;
 }
 
 export default function ParaguayStats() {
@@ -49,7 +49,7 @@ export default function ParaguayStats() {
           backgroundImage: `url(${import.meta.env.BASE_URL}FondoStats.png)` 
         }}
       >
-        {/* Capa sutil de oscurecimiento (sin desenfoque) */}
+        {/* Capa sutil de oscurecimiento */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#1D2733]/65 via-[#1D2733]/50 to-[#1D2733]/65" />
       </div>
 
@@ -58,7 +58,7 @@ export default function ParaguayStats() {
         
         {/* COLUMNA IZQUIERDA: TÍTULO PRINCIPAL TRADUCIDO */}
         <div className="lg:col-span-1">
-          <h2 className="text-3xl md:text-4xl font-serif text-white leading-tight font-medium drop-shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-serif text-white leading-tight font-bold drop-shadow-lg">
             {t('stats.subtitulo')}
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function ParaguayStats() {
         {/* COLUMNA DERECHA: LAS 4 MÉTRICAS EN HORIZONTAL */}
         <div className="lg:col-span-2 grid-cols-4 md:flex gap-8 pt-2">
 
-          <div className='hidden border border-white/20 w-0 md:block'></div>
+          <div className='hidden border border-white/30 w-0 md:block'></div>
           
           {/* Métrica 1 */}
           <motion.div 
@@ -75,15 +75,15 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="space-y-2 cursor-default flex-1"
+            className="group space-y-2 cursor-default flex-1"
           >
             <CounterPBI />
-            <p className="text-xs text-slate-100 font-medium tracking-wide uppercase drop-shadow">
+            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
               {t('stats.pbi')}
             </p>
           </motion.div>
           
-          <div className='hidden border border-white/20 w-0 md:block'></div>
+          <div className='hidden border border-white/30 w-0 md:block'></div>
 
           {/* Métrica 2 */}
           <motion.div 
@@ -92,15 +92,15 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="space-y-2 cursor-default flex-1"
+            className="group space-y-2 cursor-default flex-1"
           >
             <CounterInversion />
-            <p className="text-xs text-slate-100 font-medium tracking-wide uppercase drop-shadow">
+            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
               {t('stats.inversion')}
             </p>
           </motion.div>
           
-          <div className='hidden border border-white/20 w-0 md:block'></div>
+          <div className='hidden border border-white/30 w-0 md:block'></div>
 
           {/* Métrica 3 */}
           <motion.div 
@@ -109,15 +109,15 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="space-y-2 cursor-default flex-1"
+            className="group space-y-2 cursor-default flex-1"
           >
-            <span className="text-2xl md:text-3xl font-light text-white block drop-shadow-md">2°</span>
-            <p className="text-xs text-slate-100 font-medium tracking-wide uppercase drop-shadow">
+            <span className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">2°</span>
+            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
               {t('stats.rentabilidad')}
             </p>
           </motion.div>
           
-          <div className='hidden border border-white/20 w-0 md:block'></div>
+          <div className='hidden border border-white/30 w-0 md:block'></div>
 
           {/* Métrica 4 */}
           <motion.div 
@@ -126,10 +126,10 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="space-y-2 cursor-default flex-1"
+            className="group space-y-2 cursor-default flex-1"
           >
-            <span className="text-2xl md:text-3xl font-light text-white block drop-shadow-md">Top 10</span>
-            <p className="text-xs text-slate-100 font-medium tracking-wide uppercase drop-shadow">
+            <span className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">Top 10</span>
+            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
               {t('stats.calidadVida')}
             </p>
           </motion.div>

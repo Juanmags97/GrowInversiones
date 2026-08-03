@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import logo from '../../Public/GwLogo3.png';
+
 export default function ProjectShowcase() {
   const { t } = useTranslation();
 
@@ -10,8 +10,7 @@ export default function ProjectShowcase() {
     <section id="del-sol" className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
 
-
-        {/* ENCABEZADO PRINCIPAL CON LOGO IMPACTANTE */}
+        {/* ENCABEZADO PRINCIPAL CON LOGO GwSol.png */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,9 +20,9 @@ export default function ProjectShowcase() {
           <span className="text-[#DFC173] text-xs font-bold uppercase tracking-widest">
             {t('showcase.lanzamiento')}
           </span>
-          {/* Logo más grande y responsivo: 80px en móvil, 120px en escritorio */}
+          {/* Logo GwSol.png cargado desde la carpeta public */}
           <img
-            src={logo}
+            src={`${import.meta.env.BASE_URL}GwSol.png`}
             alt="GW Del Sol"
             className="h-20 md:h-[300px] w-auto object-contain mt-2"
           />
@@ -46,20 +45,37 @@ export default function ProjectShowcase() {
         {/* 2. SECCIÓN INFERIOR: GRILLA DE 2 COLUMNAS (TEXTO vs UBICACIÓN) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-          {/* COLUMNA INFERIOR IZQUIERDA: TEXTOS Y BOTÓN */}
+          {/* COLUMNA INFERIOR IZQUIERDA: TEXTO, LOGO NUEVO Y BOTÓN AL PDF */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6 m-auto"
+            className="space-y-6 m-auto w-full"
           >
-            <div className="bg-[#1E3957] border border-white/5 p-6 rounded-2xl shadow-2xl space-y-4">
+            <div className="bg-[#1E3957] border border-white/5 p-6 rounded-2xl shadow-2xl space-y-6">
+              {/* Texto de descripción */}
               <p className="text-neutral-300 text-sm leading-relaxed">
                 {t('showcase.descripcion')}
               </p>
-              <button className="border border-[#DFC173] text-[#DFC173] px-6 py-2 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300">
-                {t('showcase.boton')} →
-              </button>
+
+              {/* Fila con el segundo logo (LogoNuevo.png) y el enlace al PDF */}
+              <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-white/5">
+                <img
+                  src={`${import.meta.env.BASE_URL}LogoNuevo.png`}
+                  alt="Logo Nuevo"
+                  className="h-12 md:h-16 w-auto object-contain"
+                />
+
+                {/* BOTÓN CONECTADO AL PDF EN PUBLIC/ */}
+                <a
+                  href={`${import.meta.env.BASE_URL}BrochureGwDelSol.pdf`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block border border-[#DFC173] text-[#DFC173] px-6 py-2.5 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300 font-bold text-center"
+                >
+                  {t('showcase.boton')} →
+                </a>
+              </div>
 
             </div>
           </motion.div>
@@ -69,7 +85,7 @@ export default function ProjectShowcase() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#1E3957] border border-white/5 p-4 rounded-2xl shadow-2xl space-y-4"
+            className="bg-[#1E3957] border border-white/5 p-4 rounded-2xl shadow-2xl space-y-4 w-full"
           >
             <div className="flex items-center space-x-2 text-[#DFC173]">
               <i className="fa-solid fa-location-dot text-sm"></i>
@@ -78,7 +94,7 @@ export default function ProjectShowcase() {
               </span>
             </div>
 
-            {/* Mapa interactivo con las coordenadas reales actualizadas */}
+            {/* Mapa interactivo */}
             <div className="w-full h-60 rounded-xl overflow-hidden grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 border border-white/5">
               <iframe
                 title="Ubicación GW Del Sol"

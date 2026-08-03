@@ -52,8 +52,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white leading-tight">
-            {/* Si querés usar la traducción usa {t('hero.titulo')}, de lo contrario podéis dejar la línea de abajo: */}
-            {t('hero.titulo') !== 'hero.titulo' ? t('hero.titulo') : "Diseñamos espacios para quienes eligen crecer."}
+            {t('hero.titulo') !== 'hero.titulo' ? t('hero.titulo') : "Desarrollamos espacios para quienes eligen crecer."}
           </h1>
           
           <p className="text-neutral-400 mt-6 max-w-md text-sm leading-relaxed">
@@ -61,10 +60,15 @@ export default function Hero() {
           </p>
           
           <div className="mt-8 flex space-x-4">
-            {/* Botón con el dorado exacto del manual #DFC173 */}
-            <button className="bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold px-8 py-3 rounded text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-[#DFC173]/20 transition-all">
+            {/* BOTÓN CONECTADO AL PDF EN PUBLIC/ */}
+            <a
+              href={`${import.meta.env.BASE_URL}BrochureGwDelSol.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold px-8 py-3 rounded text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-[#DFC173]/20 transition-all text-center"
+            >
               Conocer Proyectos
-            </button>
+            </a>
           </div>
         </motion.div>
         
