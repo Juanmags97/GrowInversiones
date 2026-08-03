@@ -54,7 +54,7 @@ export default function AboutUs() {
             {/* Misión */}
             <motion.div 
               whileHover={{ x: 6 }}
-              className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-r-xl border-y border-r border-white/5"
+              className="p-5 bg-[#1E3957] border-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
               <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-1">
                 {t('about.misionTitulo')}
@@ -67,7 +67,7 @@ export default function AboutUs() {
             {/* Visión */}
             <motion.div 
               whileHover={{ x: 6 }}
-              className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-r-xl border-y border-r border-white/5"
+              className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
               <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-1">
                 {t('about.visionTitulo')}
@@ -80,7 +80,7 @@ export default function AboutUs() {
             {/* Valores */}
             <motion.div 
               whileHover={{ x: 6 }}
-              className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-r-xl border-y border-r border-white/5"
+              className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
               <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-1">
                 {t('about.valoresTitulo')}

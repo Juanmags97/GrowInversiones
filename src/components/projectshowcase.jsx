@@ -10,7 +10,7 @@ export default function ProjectShowcase() {
     <section id="del-sol" className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
 
-       
+
         {/* ENCABEZADO PRINCIPAL CON LOGO IMPACTANTE */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,14 +51,17 @@ export default function ProjectShowcase() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 m-auto"
           >
-            <p className="text-neutral-300 text-sm leading-relaxed">
-              {t('showcase.descripcion')}
-            </p>
-            <button className="border border-[#DFC173] text-[#DFC173] px-6 py-2 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300">
-              {t('showcase.boton')} →
-            </button>
+            <div className="bg-[#1E3957] border border-white/5 p-6 rounded-2xl shadow-2xl space-y-4">
+              <p className="text-neutral-300 text-sm leading-relaxed">
+                {t('showcase.descripcion')}
+              </p>
+              <button className="border border-[#DFC173] text-[#DFC173] px-6 py-2 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300">
+                {t('showcase.boton')} →
+              </button>
+
+            </div>
           </motion.div>
 
           {/* COLUMNA INFERIOR DERECHA: MAPA DE UBICACIÓN OFICIAL */}

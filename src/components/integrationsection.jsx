@@ -40,44 +40,50 @@ export default function IntegrationSection() {
           <p className="text-xs text-neutral-400 mb-6">{t('integration.formDescripcion')}</p>
 
           <form className="grid grid-cols-1 gap-6 text-xs">
+            {/* tipo de unidad */}
             <div>
               <label className="text-neutral-400 block mb-1">{t('integration.formUnidad')}</label>
               <select className="w-full bg-[#1D2733] border border-white/10 text-slate-300 rounded p-3 focus:outline-none focus:border-[#DFC173]">
+                <option>{t('integration.formUnidadOpciones.Monoambiente')}</option>
                 <option>{t('integration.formUnidadOpciones.1Dormitorio')}</option>
-                <option>{t('integration.formUnidadOpciones.2Dormitorio')}</option>
-                <option>{t('integration.formUnidadOpciones.Penthouse')}</option>
+                <option>{t('integration.formUnidadOpciones.2Dormitorios')}</option>
               </select>
             </div>
-
+            {/* cual es la edad */}
             <div>
               <label className="text-neutral-400 block mb-1">{t('integration.formEdad')}</label>
-              <input type="text" placeholder="Ej: 30 - 45 años" className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]" />
+              <input type="text" placeholder={t("integration.placeHolderEdad")} className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]" />
             </div>
-
+              {/* objetivo de la propiedad */}
             <div>
               <label className="text-neutral-400 block mb-1">{t('integration.formFactor')}</label>
               <select className="w-full bg-[#1D2733] border border-white/10 text-slate-300 rounded p-3 focus:outline-none focus:border-[#DFC173]">
-                <option>{t('integration.formFactorOpciones.Ubicacion')}</option>
-                <option>{t('integration.formFactorOpciones.Amenities')}</option>
-                <option>{t('integration.formFactorOpciones.Rentabilidad')}</option>
+                <option>{t('integration.formFactorOpciones.Inversion')}</option>
+                <option>{t('integration.formFactorOpciones.Vivienda')}</option>
               </select>
             </div>
-
+              {/* como se invertiria */}
             <div>
-              <label className="text-neutral-400 block mb-1">¿Para qué estás buscando adquirir?</label>
+              <label className="text-neutral-400 block mb-1">{t('integration.formInvertir')}</label>
               <select className="w-full bg-[#1D2733] border border-white/10 text-slate-300 rounded p-3 focus:outline-none focus:border-[#DFC173]">
-                <option>Inversión (Renta/Reserva de Valor)</option>
-                <option>Vivienda Propia</option>
+                <option>{t('integration.formModoInversion.Financiado')}</option>
+                <option>{t('integration.formModoInversion.Contado')}</option>
+                <option>{t('integration.formModoInversion.Ambas')}</option>
               </select>
             </div>
-
+            {/* pais de residencia */}
             <div>
-              <label className="text-neutral-400 block mb-1">¿Cómo te gustaría ser contactado?</label>
+              <label className="text-neutral-400 block mb-1">{t('integration.formPais')}</label>
+              <input type="text" placeholder={t('integration.placeHolderPais')}  className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]" />
+            </div>
+            {/* contacto */}
+            <div>
+              <label className="text-neutral-400 block mb-1">{t("integration.contacto")}</label>
               <select className="w-full bg-[#1D2733] border border-white/10 text-slate-300 rounded p-3 focus:outline-none focus:border-[#DFC173]">
-                <option>WhatsApp Directo</option>
-                <option>Llamada Telefónica</option>
-                <option>Correo Electrónico</option>
+                <option>WhatsApp</option>
+                <option>Mail</option>
               </select>
+              <input type="text" placeholder={t("integration.placeHolderCorreo")} className="w-full bg-[#1D2733] border my-6 border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]"/>
             </div>
 
             {/* BOTÓN ALINEADO CON LA GRILLA */}

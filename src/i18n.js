@@ -42,27 +42,37 @@ const resources = {
         "boton": "Conocer Proyecto"
       },
       "integration": {
-        "newsletterTitulo": "Newsletter",
-        "newsletterDescripcion": "Recibí las últimas novedades del mercado inmobiliario y oportunidades exclusivas.",
         "newsletterBoton": "Suscribirme",
         "instagramTitulo": "Conectá con nosotros:",
         "formTitulo": "Dejanos tus datos",
         "formDescripcion": "Un asesor experto se pondrá en contacto a la brevedad.",
         "formUnidad": "¿Qué tipo de unidad estás buscando?",
-        "formEdad": "¿Cuál es tu rango de edad?",
-        "formFactor": "¿Qué factor valorás más?",
-        "formEnviar": "Enviar Requerimientos",
         "formUnidadOpciones": {
           "1Dormitorio": "Departamento 1 Dormitorio",
           "2Dormitorios": "Departamento 2 Dormitorios",
-          "Penthouse": "Penthouse / Premium"
+          "Monoambiente": "Monoambiente"
         },
+        "formEdad": "¿Cuál es tu rango de edad?",
+        "placeHolderEdad": "Ej: 30 - 45 años",
+        "formFactor": "¿Cuál es el objetivo de la propiedad?",
         "formFactorOpciones": {
-          "Ubicacion": "Ubicación y Conectividad",
-          "Amenities": "Amenities Premium",
-          "Rentabilidad": "Rentabilidad del Pozo"
+          "Inversion": "Para inversión",
+          "Vivienda": "Para vivienda"
         },
-        "formEdadPlaceholder": "Ej: 30 - 45 años",
+        "formInvertir": "¿Cómo te gustaría invertir?",
+        "formModoInversion": {
+          "Financiado": "Financiado",
+          "Contado": "Contado",
+          "Ambas": "Ambas"
+        },
+        "formPais": "país de residencia",
+        "placeHolderPais": "Ej: Argentina, Uruguay, Brasil, Chile, México, España, Estados Unidos",
+        "contacto": "Dejanos tu contacto",
+        "placeHolderCorreo": "Tu correo electrónico o WhatsApp",
+
+
+
+        "formEnviar": "Enviar Requerimientos",
         "formEmailPlaceholder": "Tu correo electrónico",
         "formEmailBoton": "Suscribirme",
         "formEmailAviso": "Recibirás novedades y oportunidades exclusivas.",
@@ -116,23 +126,33 @@ const resources = {
         "newsletterDescripcion": "Receba as últimas novidades do mercado imobiliário e oportunidades exclusivas.",
         "newsletterBoton": "Inscrever-me",
         "instagramTitulo": "Conecte-se conosco:",
+
         "formTitulo": "Deixe seus dados",
         "formDescripcion": "Um consultor especializado entrará em contato o mais breve possível.",
         "formUnidad": "Que tipo de unidade você está procurando?",
-        "formEdad": "Qual é a sua faixa etária?",
-        "formFactor": "Qual fator você mais valoriza?",
-        "formEnviar": "Enviar Requisitos",
         "formUnidadOpciones": {
-          "1Dormitorio": "Apartamento 1 Dormitório",
-          "2Dormitorios": "Apartamento 2 Dormitórios",
-          "Penthouse": "Cobertura / Premium"
+          "1Dormitorio": "Apartamento de 1 Dormitório",
+          "2Dormitorios": "Apartamento de 2 Dormitórios",
+          "Monoambiente": "Studio / Kitnet"
         },
+        "formEdad": "Qual é a sua faixa etária?",
+        "placeHolderEdad": "Ex: 30 - 45 anos",
+        "formFactor": "Qual é o objetivo da propriedade?",
         "formFactorOpciones": {
-          "Ubicacion": "Localização e Conectividade",
-          "Amenities": "Comodidades Premium",
-          "Rentabilidad": "Rentabilidade na Planta"
+          "Inversion": "Para investimento",
+          "Vivienda": "Para moradia"
         },
-        "formEdadPlaceholder": "Ex: 30 - 45 anos",
+        "formInvertir": "Como você gostaria de investir?",
+        "formModoInversion": {
+          "Financiado": "Financiado",
+          "Contado": "À vista",
+          "Ambas": "Ambos"
+        },
+        "formPais": "País de residência",
+        "placeHolderPais": "Ex: Argentina, Uruguai, Brasil, Chile, México, Espanha, Estados Unidos",
+        "contacto": "Deixe seu contato",
+        "placeHolderCorreo": "Seu e-mail ou WhatsApp",
+
         "formEmailPlaceholder": "Seu e-mail",
         "formEmailBoton": "Inscrever-me",
         "formEmailAviso": "Você receberá novidades e oportunidades exclusivas.",
@@ -189,21 +209,28 @@ const resources = {
         "formTitulo": "Leave us your details",
         "formDescripcion": "An expert advisor will contact you shortly.",
         "formUnidad": "What type of unit are you looking for?",
-        "formEdad": "What is your age range?",
-        "formFactor": "Which factor do you value most?",
-        "formEnviar": "Send Requirements",
         "formUnidadOpciones": {
           "1Dormitorio": "1-Bedroom Apartment",
           "2Dormitorios": "2-Bedroom Apartment",
-          "Penthouse": "Penthouse / Premium"
+          "Monoambiente": "Studio Apartment"
         },
+        "formEdad": "What is your age range?",
+        "placeHolderEdad": "E.g., 30 - 45 years old",
+        "formFactor": "What is the purpose of the property?",
         "formFactorOpciones": {
-          "Ubicacion": "Location and Connectivity",
-          "Amenities": "Premium Amenities",
-          "Rentabilidad": "Off-Plan Profitability"
+          "Inversion": "For investment",
+          "Vivienda": "For personal residence"
         },
-        "formEdadPlaceholder": "E.g., 30 - 45 years old",
-        "formEmailPlaceholder": "Your email address",
+        "formInvertir": "How would you like to invest?",
+        "formModoInversion": {
+          "Financiado": "Financed",
+          "Contado": "Cash payment",
+          "Ambas": "Both"
+        },
+        "formPais": "Country of residence",
+        "placeHolderPais": "E.g., Argentina, Uruguay, Brazil, Chile, Mexico, Spain, United States",
+        "contacto": "Leave us your contact information",
+        "placeHolderCorreo": "Your email or WhatsApp",
         "formEmailBoton": "Subscribe",
         "formEmailAviso": "You will receive exclusive updates and opportunities.",
         "formEmailAvisoPrivacidad": "We are committed to protecting your privacy and will never share your data.",
@@ -218,9 +245,9 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'es', 
+    lng: 'es',
     interpolation: {
-      escapeValue: false 
+      escapeValue: false
     }
   });
 
