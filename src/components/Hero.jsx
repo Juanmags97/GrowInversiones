@@ -5,15 +5,12 @@ import DeptoPanoramico from '../../Public/DeptoPanoramico.jpg';
 import FachadaPanoramica from '../../Public/FachadaPanoramica.jpg';
 import RenderRecepcion from '../../Public/RenderRecepcion.jpg';
 
-
-// Cambiá la lista de imágenes para que incluya la base URL dinámica
+// Lista de imágenes para el carrusel
 const IMAGES = [
   DeptoPanoramico,
   FachadaPanoramica,
   RenderRecepcion
 ];
-
-
 
 export default function Hero() {
   const { t } = useTranslation(); // <-- Declaración interna del traductor
@@ -55,8 +52,8 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white leading-tight">
-            {/* Traducido con i18n */}
-            {t('hero.titulo')}
+            {/* Si querés usar la traducción usa {t('hero.titulo')}, de lo contrario podéis dejar la línea de abajo: */}
+            {t('hero.titulo') !== 'hero.titulo' ? t('hero.titulo') : "Diseñamos espacios para quienes eligen crecer."}
           </h1>
           
           <p className="text-neutral-400 mt-6 max-w-md text-sm leading-relaxed">

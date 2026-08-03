@@ -12,7 +12,7 @@ const resources = {
         "contacto": "Contacto"
       },
       "hero": {
-        "titulo": "Construimos espacios para quienes eligen crecer."
+        "titulo": "Diseñamos espacios para quienes eligen crecer."
       },
       "contacto": {
         "titulo": "Dejanos tus datos",
@@ -69,9 +69,6 @@ const resources = {
         "placeHolderPais": "Ej: Argentina, Uruguay, Brasil, Chile, México, España, Estados Unidos",
         "contacto": "Dejanos tu contacto",
         "placeHolderCorreo": "Tu correo electrónico o WhatsApp",
-
-
-
         "formEnviar": "Enviar Requerimientos",
         "formEmailPlaceholder": "Tu correo electrónico",
         "formEmailBoton": "Suscribirme",
@@ -92,7 +89,7 @@ const resources = {
         "contacto": "Contato"
       },
       "hero": {
-        "titulo": "Construímos espaços para quem escolhe crescer."
+        "titulo": "Projetamos espaços para quem escolhe crescer."
       },
       "contacto": {
         "titulo": "Deixe seus dados",
@@ -126,7 +123,6 @@ const resources = {
         "newsletterDescripcion": "Receba as últimas novidades do mercado imobiliário e oportunidades exclusivas.",
         "newsletterBoton": "Inscrever-me",
         "instagramTitulo": "Conecte-se conosco:",
-
         "formTitulo": "Deixe seus dados",
         "formDescripcion": "Um consultor especializado entrará em contato o mais breve possível.",
         "formUnidad": "Que tipo de unidade você está procurando?",
@@ -148,7 +144,7 @@ const resources = {
           "Contado": "À vista",
           "Ambas": "Ambos"
         },
-        "formPais": "País de residência",
+        "formPais": "País de referência",
         "placeHolderPais": "Ex: Argentina, Uruguai, Brasil, Chile, México, Espanha, Estados Unidos",
         "contacto": "Deixe seu contato",
         "placeHolderCorreo": "Seu e-mail ou WhatsApp",
@@ -172,7 +168,7 @@ const resources = {
         "contacto": "Contact"
       },
       "hero": {
-        "titulo": "We build spaces for those who choose to grow."
+        "titulo": "We design spaces for those who choose to grow."
       },
       "contacto": {
         "titulo": "Leave us your details",
