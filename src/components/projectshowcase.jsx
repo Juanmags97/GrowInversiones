@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import logoNuevo from '../../Public/gsNuevo.png';
 import logoArriba from '../../Public/gw-del-sol.png';
+import video from '../../Public/VideoHorizontal.mp4';
 
 export default function ProjectShowcase() {
   const { t } = useTranslation();
@@ -38,7 +39,7 @@ export default function ProjectShowcase() {
           className="relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957] aspect-video w-full mb-12"
         >
           <video
-            src={`${import.meta.env.BASE_URL}VideoHorizontal.mp4`}
+            src={video}
             controls
             className="w-full h-full object-cover"
           />
