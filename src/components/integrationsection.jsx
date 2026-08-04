@@ -83,7 +83,7 @@ export default function IntegrationSection() {
           <h4 className="text-white font-serif text-lg text-center md:text-left">
             {t('integration.instagramTitulo')} <span className="text-[#DFC173]">@gwdesarrollos.py</span>
           </h4>
-          <div className="bg-[#1E3957] border border-white/5 p-4 rounded-2xl shadow-2xl w-full">
+          <div className=" border border-white/5 p-4 rounded-2xl shadow-2xl w-full">
             <div
               className="elfsight-app-74bfe8d7-75a9-4dc5-9580-94fdc7120701"
               data-elfsight-app-lazy

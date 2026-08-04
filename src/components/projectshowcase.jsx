@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import logoNuevo from '../../Public/gsNuevo.png';
+import logoArriba from '../../Public/gw-del-sol.png';
 
 export default function ProjectShowcase() {
   const { t } = useTranslation();
@@ -22,9 +24,9 @@ export default function ProjectShowcase() {
           </span>
           {/* Logo GwSol.png cargado desde la carpeta public */}
           <img
-            src={`${import.meta.env.BASE_URL}GwSol.png`}
+            src={logoArriba}
             alt="GW Del Sol"
-            className="h-20 md:h-[300px] w-auto object-contain mt-2"
+            className="h-20 md:h-[160px] w-auto object-contain mt-2"
           />
         </motion.div>
 
@@ -59,11 +61,12 @@ export default function ProjectShowcase() {
               </p>
 
               {/* Fila con el segundo logo (LogoNuevo.png) y el enlace al PDF */}
-              <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-white/5">
+              </div>
+              <div className="flex flex-wrap items-center m-auto justify-center gap-4 pt-2 ">
                 <img
-                  src={`${import.meta.env.BASE_URL}LogoNuevo.png`}
+                  src={logoNuevo}
                   alt="Logo Nuevo"
-                  className="h-12 md:h-16 w-auto object-contain"
+                  className="h-15 md:h-[160px] w-auto object-contain"
                 />
 
                 {/* BOTÓN CONECTADO AL PDF EN PUBLIC/ */}
@@ -71,11 +74,10 @@ export default function ProjectShowcase() {
                   href={`${import.meta.env.BASE_URL}BrochureGwDelSol.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block border border-[#DFC173] text-[#DFC173] px-6 py-2.5 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300 font-bold text-center"
+                  className="inline-block border border-[#DFC173] text-[#DFC173] px-6 py-2.5 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300 font-bold m-auto text-center"
                 >
                   {t('showcase.boton')} →
                 </a>
-              </div>
 
             </div>
           </motion.div>

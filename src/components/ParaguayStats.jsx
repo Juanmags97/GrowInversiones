@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import fondo from '../../Public/FondoStats.png';
 
 // Componente animado para la métrica 1 (+4,5%)
 function CounterPBI() {
@@ -46,7 +47,7 @@ export default function ParaguayStats() {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: `url(${import.meta.env.BASE_URL}FondoStats.png)` 
+          backgroundImage: `url(${fondo})`,
         }}
       >
         {/* Capa sutil de oscurecimiento */}
