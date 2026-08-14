@@ -5,6 +5,7 @@ import ParaguayStats from './components/ParaguayStats';
 import AboutUs from './components/AboutUs';
 import ProjectShowcase from './components/projectshowcase';
 import IntegrationSection from './components/integrationsection';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
       <AboutUs />
       <ProjectShowcase />
       <IntegrationSection />
-
+      <Footer />
       {/* 📱 BOTÓN FLOTANTE LATERAL PREMIUM EDICIÓN GW */}
       <div className="group fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center hoverWap bg-[#1D2733]/60 backdrop-blur-md border border-[#DFC173]/20 rounded-l-xl py-6 px-3 space-y-8 text-[10px] uppercase tracking-[0.2em] text-white">
 
