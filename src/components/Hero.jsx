@@ -32,11 +32,13 @@ export default function Hero() {
           <motion.img
             key={index}
             src={IMAGES[index]}
+            alt={["Departamento panorámico GW Del Sol en Asunción", "Fachada panorámica del proyecto GW Del Sol", "Render de recepción del edificio GW Del Sol"][index]}
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 0.35, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             className="w-full h-full object-cover"
+            loading={index === 0 ? "eager" : "lazy"}
           />
         </AnimatePresence>
         {/* Degradado adaptado al color oficial #1D2733 */}

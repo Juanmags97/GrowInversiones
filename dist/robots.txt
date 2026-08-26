@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gwdesarrollos.com.py/sitemap.xml
+
+# Disallow admin/API paths if any
+Disallow: /assets/

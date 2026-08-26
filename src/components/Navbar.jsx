@@ -9,6 +9,12 @@ export default function Navbar() {
   // Función automática para cambiar de idioma al hacer clic
   const cambiarIdioma = (lng) => {
     i18n.changeLanguage(lng);
+    document.documentElement.lang = lng;
+    document.title = {
+      es: "GW Desarrollos | Inversiones Inmobiliarias en Paraguay",
+      pt: "GW Desarrollos | Investimentos Imobiliários no Paraguai",
+      en: "GW Desarrollos | Real Estate Investments in Paraguay"
+    }[lng] || document.title;
   };
 
   return (
