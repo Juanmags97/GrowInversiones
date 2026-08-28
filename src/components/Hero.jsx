@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // <-- Hook importado correctamente
-import DeptoPanoramico from '../../Public/DeptoPanoramico.jpg';
-import FachadaPanoramica from '../../Public/FachadaPanoramica.jpg';
-import RenderRecepcion from '../../Public/RenderRecepcion.jpg';
+import DeptoPanoramico from '../../Public/DeptoPanoramico.webp';
+import FachadaPanoramica from '../../Public/FachadaPanoramica.webp';
+import RenderRecepcion from '../../Public/RenderRecepcion.webp';
 
 // Lista de imágenes para el carrusel
 const IMAGES = [

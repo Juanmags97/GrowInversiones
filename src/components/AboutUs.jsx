@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // <-- 1. Importamos el hook de traducción
-import fotoSocios from '../../Public/FotosSocios.png'; // <-- Importamos la imagen de los socios
+import fotoSocios from '../../Public/FotosSocios.webp'; // <-- Importamos la imagen de los socios
 export default function AboutUs() {
   const { t } = useTranslation(); // <-- 2. Declaramos la función de traducción
 
