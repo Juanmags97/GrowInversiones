@@ -5,7 +5,7 @@ export default function IntegrationSection() {
   const { t } = useTranslation(); 
   
   // ⚠️ PEGÁ ACÁ LA URL QUE TE DIO GOOGLE APPS SCRIPT
-  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzOiGmKucOPmZN-MuE8nMW4R-NzO7eWaX-I3EXIsFPRVj9AX7oREtDXbSjHl2HjL5iv/exec";
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycby-rBCu64FIyjC4hYJTgxHtOtbjAXehHo6ZypO5sGFf0JoO9EoxppajA9-leZY4WYp93w/exec";
 
   const [formData, setFormData] = useState({
     tipoUnidad: 'Monoambiente',
