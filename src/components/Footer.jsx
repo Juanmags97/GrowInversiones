@@ -14,7 +14,7 @@ export default function Footer() {
                 <p className="text-xs text-white">
                     Powered by{' '}
                     <a
-                        href="https://juanmags97.github.io/OniSolutions/"
+                        href="https://www.onisolutions.com.ar"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="font-bold text-white underline hover:opacity-80 transition-opacity duration-200"
