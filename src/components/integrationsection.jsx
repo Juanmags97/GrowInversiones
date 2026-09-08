@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function IntegrationSection() {
-  const { t } = useTranslation(); 
-  
+  const { t } = useTranslation();
+
   // ⚠️ PEGÁ ACÁ LA URL QUE TE DIO GOOGLE APPS SCRIPT
   const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycby-rBCu64FIyjC4hYJTgxHtOtbjAXehHo6ZypO5sGFf0JoO9EoxppajA9-leZY4WYp93w/exec";
 
@@ -79,7 +79,7 @@ export default function IntegrationSection() {
       <div className="max-w-7xl mx-auto px-6 space-y-16">
 
         {/* INSTAGRAM GRID */}
-        <div className="w-full space-y-4">
+        {/* <div className="w-full space-y-4">
           <h4 className="text-white font-serif text-lg text-center md:text-left">
             {t('integration.instagramTitulo')} <span className="text-[#DFC173]">@gwdesarrollos.py</span>
           </h4>
@@ -89,7 +89,10 @@ export default function IntegrationSection() {
               data-elfsight-app-lazy
             ></div>
           </div>
-        </div>
+        </div> */}
+        
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-bf6a6c30-1d85-4c56-a907-aca8ffe9a590" data-elfsight-app-lazy></div>
 
         {/* FORMULARIO CONECTADO A GOOGLE SHEETS */}
         <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full">
@@ -100,8 +103,8 @@ export default function IntegrationSection() {
             <div className="bg-emerald-900/40 border border-emerald-500/30 text-emerald-200 p-6 rounded-xl text-center space-y-2">
               <h4 className="font-bold text-sm uppercase tracking-wider">¡Requerimiento enviado con éxito!</h4>
               <p className="text-xs">Un asesor experto se pondrá en contacto a la brevedad.</p>
-              <button 
-                onClick={() => setEnviado(false)} 
+              <button
+                onClick={() => setEnviado(false)}
                 className="mt-4 text-xs text-[#DFC173] underline hover:text-white transition-colors"
               >
                 Enviar otro mensaje
@@ -109,13 +112,13 @@ export default function IntegrationSection() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-              
+
               {/* Tipo de unidad */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formUnidad')}</label>
-                <select 
-                  name="tipoUnidad" 
-                  value={formData.tipoUnidad} 
+                <select
+                  name="tipoUnidad"
+                  value={formData.tipoUnidad}
                   onChange={handleChange}
                   className="w-full bg-[#1D2733] border border-white/10 text-slate-300 rounded p-3 focus:outline-none focus:border-[#DFC173]"
                 >
@@ -128,20 +131,20 @@ export default function IntegrationSection() {
               {/* Edad */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formEdad')}</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="edad"
                   value={formData.edad}
                   onChange={handleChange}
-                  placeholder={t("integration.placeHolderEdad")} 
-                  className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]" 
+                  placeholder={t("integration.placeHolderEdad")}
+                  className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]"
                 />
               </div>
 
               {/* Objetivo */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formFactor')}</label>
-                <select 
+                <select
                   name="objetivo"
                   value={formData.objetivo}
                   onChange={handleChange}
@@ -155,7 +158,7 @@ export default function IntegrationSection() {
               {/* Modo inversión */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formInvertir')}</label>
-                <select 
+                <select
                   name="modoInversion"
                   value={formData.modoInversion}
                   onChange={handleChange}
@@ -170,20 +173,20 @@ export default function IntegrationSection() {
               {/* País */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formPais')}</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="pais"
                   value={formData.pais}
                   onChange={handleChange}
-                  placeholder={t('integration.placeHolderPais')} 
-                  className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]" 
+                  placeholder={t('integration.placeHolderPais')}
+                  className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]"
                 />
               </div>
 
               {/* Medio de contacto */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t("integration.contacto")}</label>
-                <select 
+                <select
                   name="medioContacto"
                   value={formData.medioContacto}
                   onChange={handleChange}
@@ -197,21 +200,21 @@ export default function IntegrationSection() {
               {/* Contacto directo */}
               <div className="md:col-span-2">
                 <label className="text-neutral-400 block mb-1">Contacto directo (Email o Celular)</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="contactoDirecto"
                   value={formData.contactoDirecto}
                   onChange={handleChange}
-                  placeholder={t("integration.placeHolderCorreo")} 
+                  placeholder={t("integration.placeHolderCorreo")}
                   className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]"
-                  required 
+                  required
                 />
               </div>
 
               {/* Botón de envío */}
               <div className="md:col-span-2 pt-2">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={loading}
                   className="w-full bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold uppercase py-3 rounded tracking-widest hover:shadow-lg hover:shadow-[#DFC173]/10 transition-all disabled:opacity-50"
                 >
