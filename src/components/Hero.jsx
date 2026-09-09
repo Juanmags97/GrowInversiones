@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next'; // <-- Hook importado correctamente
+import { useTranslation } from 'react-i18next';
 import DeptoPanoramico from '../../Public/DeptoPanoramico.webp';
 import FachadaPanoramica from '../../Public/FachadaPanoramica.webp';
 import RenderRecepcion from '../../Public/RenderRecepcion.webp';
@@ -13,7 +13,7 @@ const IMAGES = [
 ];
 
 export default function Hero() {
-  const { t } = useTranslation(); // <-- Declaración interna del traductor
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -75,6 +75,40 @@ export default function Hero() {
         </motion.div>
         
       </div>
+
+      {/* 🧭 CTA PRE-SCROLL / SCROLL INDICATOR GW */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center select-none"
+      >
+        <a
+          href="#stats" 
+          className="group flex flex-col items-center gap-2 text-neutral-400 hover:text-[#DFC173] transition-colors duration-300 cursor-pointer"
+          aria-label="Desplazarse hacia las estadísticas e inversiones"
+        >
+          <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-neutral-400/80 group-hover:text-[#DFC173] transition-colors">
+            Descubrir Inversiones
+          </span>
+
+          {/* Icono ratón interactivo con rebote */}
+          <div className="w-5 h-9 rounded-full border border-neutral-500/50 group-hover:border-[#DFC173]/80 flex justify-center p-1 backdrop-blur-sm bg-black/20 transition-colors">
+            <div className="w-1 h-2 bg-[#DFC173] rounded-full animate-bounce mt-0.5" />
+          </div>
+
+          {/* Flecha hacia abajo */}
+          <svg 
+            className="w-4 h-4 text-[#DFC173]/80 group-hover:translate-y-1 transition-transform" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </motion.div>
+
     </section>
   );
 }

@@ -41,7 +41,7 @@ export default function ParaguayStats() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-20 text-white border-t border-white/5 overflow-hidden">
+    <section id="stats" className="relative py-20 text-white border-t border-white/5 overflow-hidden">
       
       {/* 1. IMAGEN DE FONDO MÁS VISIBLE Y NÍTIDA */}
       <div 

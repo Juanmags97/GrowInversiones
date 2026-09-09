@@ -21,15 +21,15 @@ export default function IntegrationSection() {
   const [enviado, setEnviado] = useState(false);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    // Carga el script de Elfsight una sola vez de forma controlada
+    const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
   const handleChange = (e) => {
@@ -78,21 +78,10 @@ export default function IntegrationSection() {
     <section className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 space-y-16">
 
-        {/* INSTAGRAM GRID */}
-        {/* <div className="w-full space-y-4">
-          <h4 className="text-white font-serif text-lg text-center md:text-left">
-            {t('integration.instagramTitulo')} <span className="text-[#DFC173]">@gwdesarrollos.py</span>
-          </h4>
-          <div className=" border border-white/5 p-4 rounded-2xl shadow-2xl w-full">
-            <div
-              className="elfsight-app-74bfe8d7-75a9-4dc5-9580-94fdc7120701"
-              data-elfsight-app-lazy
-            ></div>
-          </div>
-        </div> */}
-        j
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-bf6a6c30-1d85-4c56-a907-aca8ffe9a590" data-elfsight-app-lazy></div>
+        {/* FEED DE INSTAGRAM (UN SOLO CONTENEDOR) */}
+        <div className="w-full">
+          <div className="elfsight-app-bf6a6c30-1d85-4c56-a907-aca8ffe9a590" data-elfsight-app-lazy />
+        </div>
 
         {/* FORMULARIO CONECTADO A GOOGLE SHEETS */}
         <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full">
