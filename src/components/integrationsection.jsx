@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 export default function IntegrationSection() {
   const { t } = useTranslation();
 
-  // ⚠️ PEGÁ ACÁ LA URL QUE TE DIO GOOGLE APPS SCRIPT
   const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycby-rBCu64FIyjC4hYJTgxHtOtbjAXehHo6ZypO5sGFf0JoO9EoxppajA9-leZY4WYp93w/exec";
 
   const [formData, setFormData] = useState({
@@ -19,9 +18,9 @@ export default function IntegrationSection() {
 
   const [loading, setLoading] = useState(false);
   const [enviado, setEnviado] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
-    // Carga el script de Elfsight una sola vez de forma controlada
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
     if (!existingScript) {
       const script = document.createElement('script');
@@ -35,27 +34,38 @@ export default function IntegrationSection() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    if (errorMsg) setErrorMsg('');
+  };
+
+  const validateContact = (contact) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[+0-9\s-]{7,20}$/;
+    return emailRegex.test(contact) || phoneRegex.test(contact);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.contactoDirecto) {
-      alert("Por favor ingresá un contacto (Email o Celular).");
+    setErrorMsg('');
+
+    if (!formData.contactoDirecto.trim() || !validateContact(formData.contactoDirecto.trim())) {
+      setErrorMsg("Ingresá un número de teléfono o correo electrónico válido.");
       return;
     }
 
     setLoading(true);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
 
     try {
       await fetch(GOOGLE_SHEET_URL, {
         method: 'POST',
-        mode: 'no-cors', // Evita problemas de CORS con Google Scripts
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+        signal: controller.signal
       });
 
+      clearTimeout(timeoutId);
       setEnviado(true);
       setFormData({
         tipoUnidad: 'Monoambiente',
@@ -67,8 +77,8 @@ export default function IntegrationSection() {
         contactoDirecto: ''
       });
     } catch (error) {
-      console.error("Error al enviar el formulario:", error);
-      alert("Hubo un error al enviar tus datos. Intentalo de nuevo.");
+      clearTimeout(timeoutId);
+      setErrorMsg("Ocurrió una demora al conectar. Podés contactarnos directamente por WhatsApp.");
     } finally {
       setLoading(false);
     }
@@ -78,12 +88,22 @@ export default function IntegrationSection() {
     <section className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 space-y-16">
 
-        {/* FEED DE INSTAGRAM (UN SOLO CONTENEDOR) */}
+        {/* FEED DE INSTAGRAM CON FALLBACK */}
         <div className="w-full">
           <div className="elfsight-app-bf6a6c30-1d85-4c56-a907-aca8ffe9a590" data-elfsight-app-lazy />
+          <div className="mt-4 text-center">
+            <a 
+              href="https://www.instagram.com/gwdesarrollos.py" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xs font-mono text-[#DFC173]/80 hover:text-[#DFC173] transition-colors"
+            >
+              Seguinos en @gwdesarrollos.py →
+            </a>
+          </div>
         </div>
 
-        {/* FORMULARIO CONECTADO A GOOGLE SHEETS */}
+        {/* FORMULARIO DE LEADS */}
         <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full">
           <h3 className="text-white font-serif text-xl mb-2">{t('integration.formTitulo')}</h3>
           <p className="text-xs text-neutral-400 mb-6">{t('integration.formDescripcion')}</p>
@@ -91,18 +111,17 @@ export default function IntegrationSection() {
           {enviado ? (
             <div className="bg-emerald-900/40 border border-emerald-500/30 text-emerald-200 p-6 rounded-xl text-center space-y-2">
               <h4 className="font-bold text-sm uppercase tracking-wider">¡Requerimiento enviado con éxito!</h4>
-              <p className="text-xs">Un asesor experto se pondrá en contacto a la brevedad.</p>
+              <p className="text-xs">Un asesor de GW se pondrá en contacto a la brevedad.</p>
               <button
                 onClick={() => setEnviado(false)}
                 className="mt-4 text-xs text-[#DFC173] underline hover:text-white transition-colors"
               >
-                Enviar otro mensaje
+                Enviar otra consulta
               </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
 
-              {/* Tipo de unidad */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formUnidad')}</label>
                 <select
@@ -117,11 +136,12 @@ export default function IntegrationSection() {
                 </select>
               </div>
 
-              {/* Edad */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formEdad')}</label>
                 <input
-                  type="text"
+                  type="number"
+                  min="18"
+                  max="99"
                   name="edad"
                   value={formData.edad}
                   onChange={handleChange}
@@ -130,7 +150,6 @@ export default function IntegrationSection() {
                 />
               </div>
 
-              {/* Objetivo */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formFactor')}</label>
                 <select
@@ -144,7 +163,6 @@ export default function IntegrationSection() {
                 </select>
               </div>
 
-              {/* Modo inversión */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formInvertir')}</label>
                 <select
@@ -159,7 +177,6 @@ export default function IntegrationSection() {
                 </select>
               </div>
 
-              {/* País */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t('integration.formPais')}</label>
                 <input
@@ -172,7 +189,6 @@ export default function IntegrationSection() {
                 />
               </div>
 
-              {/* Medio de contacto */}
               <div>
                 <label className="text-neutral-400 block mb-1">{t("integration.contacto")}</label>
                 <select
@@ -186,28 +202,29 @@ export default function IntegrationSection() {
                 </select>
               </div>
 
-              {/* Contacto directo */}
               <div className="md:col-span-2">
-                <label className="text-neutral-400 block mb-1">Contacto directo (Email o Celular)</label>
+                <label className="text-neutral-400 block mb-1">Contacto directo (Email o Celular con código de país)</label>
                 <input
                   type="text"
                   name="contactoDirecto"
                   value={formData.contactoDirecto}
                   onChange={handleChange}
-                  placeholder={t("integration.placeHolderCorreo")}
+                  placeholder="+595 971 ... o ejemplo@gmail.com"
                   className="w-full bg-[#1D2733] border border-white/10 text-white rounded p-3 focus:outline-none focus:border-[#DFC173]"
                   required
                 />
+                {errorMsg && (
+                  <p className="mt-2 text-xs text-rose-400 font-mono">{errorMsg}</p>
+                )}
               </div>
 
-              {/* Botón de envío */}
               <div className="md:col-span-2 pt-2">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold uppercase py-3 rounded tracking-widest hover:shadow-lg hover:shadow-[#DFC173]/10 transition-all disabled:opacity-50"
+                  className="w-full bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold uppercase py-3 rounded tracking-widest hover:shadow-lg hover:shadow-[#DFC173]/10 transition-all disabled:opacity-50 cursor-pointer"
                 >
-                  {loading ? "Enviando..." : t("integration.formEnviar")}
+                  {loading ? "Enviando Requerimiento..." : t("integration.formEnviar")}
                 </button>
               </div>
 
