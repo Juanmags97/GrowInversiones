@@ -7,32 +7,24 @@ export default function Acknowledgements() {
 
   const partners = [
     {
-      categoria: t('acknowledgements.catArquitectura') !== 'acknowledgements.catArquitectura' 
-        ? t('acknowledgements.catArquitectura') 
-        : 'Arquitectura & Diseño',
-      nombre: 'Estudio de Arquitectura & Urbanismo',
-      detalle: 'Diseño estructural y desarrollo de concepto espacial premium'
+      categoria: t('acknowledgements.catArquitectura', 'Arquitectura & Diseño'),
+      nombre: t('acknowledgements.nombreArquitectura', 'Estudio de Arquitectura & Urbanismo'),
+      detalle: t('acknowledgements.detalleArquitectura', 'Diseño estructural y desarrollo de concepto espacial premium')
     },
     {
-      categoria: t('acknowledgements.catIngenieria') !== 'acknowledgements.catIngenieria' 
-        ? t('acknowledgements.catIngenieria') 
-        : 'Ingeniería & Construcción',
-      nombre: 'Constructora & Fiscalización',
-      detalle: 'Dirección de obra, normas de calidad y seguridad edilicia'
+      categoria: t('acknowledgements.catIngenieria', 'Ingeniería & Construcción'),
+      nombre: t('acknowledgements.nombreIngenieria', 'Constructora & Fiscalización'),
+      detalle: t('acknowledgements.detalleIngenieria', 'Dirección de obra, normas de calidad y seguridad edilicia')
     },
     {
-      categoria: t('acknowledgements.catFinanciero') !== 'acknowledgements.catFinanciero' 
-        ? t('acknowledgements.catFinanciero') 
-        : 'Respaldo Financiero & Legal',
-      nombre: 'Fiduciaria & Entidades Aliadas',
-      detalle: 'Garantía legal, estructuración de fideicomisos y seguridad jurídica'
+      categoria: t('acknowledgements.catFinanciero', 'Respaldo Financiero & Legal'),
+      nombre: t('acknowledgements.nombreFinanciero', 'Fiduciaria & Entidades Aliadas'),
+      detalle: t('acknowledgements.detalleFinanciero', 'Garantía legal, estructuración de fideicomisos y seguridad jurídica')
     },
     {
-      categoria: t('acknowledgements.catInversores') !== 'acknowledgements.catInversores' 
-        ? t('acknowledgements.catInversores') 
-        : 'Comunidad de Inversores',
-      nombre: 'Red de Inversores Regionales',
-      detalle: 'Confianza y proyección en cada etapa de crecimiento'
+      categoria: t('acknowledgements.catInversores', 'Comunidad de Inversores'),
+      nombre: t('acknowledgements.nombreInversores', 'Red de Inversores Regionales'),
+      detalle: t('acknowledgements.detalleInversores', 'Confianza y proyección en cada etapa de crecimiento')
     }
   ];
 
@@ -43,7 +35,7 @@ export default function Acknowledgements() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         
-        {/* Cabecera de la sección */}
+        {/* Cabecera */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
@@ -51,37 +43,31 @@ export default function Acknowledgements() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1 rounded-full border border-[#DFC173]/20 bg-[#1D2733]/50 text-[#DFC173] text-[11px] uppercase tracking-[0.25em]"
           >
-            {t('acknowledgements.badge') !== 'acknowledgements.badge' 
-              ? t('acknowledgements.badge') 
-              : 'Alianzas & Confianza'}
+            {t('acknowledgements.badge', 'Alianzas & Confianza')}
           </motion.span>
 
           <motion.h2 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+          
             className="text-3xl md:text-4xl font-serif font-bold tracking-tight text-white"
           >
-            {t('acknowledgements.titulo') !== 'acknowledgements.titulo' 
-              ? t('acknowledgements.titulo') 
-              : 'Agradecimientos & Respaldo'}
+            {t('acknowledgements.titulo', 'Agradecimientos & Respaldo')}
           </motion.h2>
 
           <motion.p 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          
             className="text-neutral-400 text-sm md:text-base leading-relaxed"
           >
-            {t('acknowledgements.descripcion') !== 'acknowledgements.descripcion' 
-              ? t('acknowledgements.descripcion') 
-              : 'Detrás de cada metro cuadrado construido y de cada rentabilidad proyectada hay un equipo multidisciplinario y aliados que hacen posible la excelencia de GW.'}
+            {t('acknowledgements.descripcion', 'Detrás de cada metro cuadrado construido y de cada rentabilidad proyectada hay un equipo multidisciplinario y aliados que hacen posible la excelencia de GW.')}
           </motion.p>
         </div>
 
-        {/* Tarjetas de aliados y agradecimientos */}
+        {/* Tarjetas */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {partners.map((item, idx) => (
             <motion.div
@@ -89,7 +75,7 @@ export default function Acknowledgements() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              transition={{ duration: 0.1, }}
               whileHover={{ y: -5 }}
               className="bg-[#1D2733]/40 border border-white/10 hover:border-[#DFC173]/40 p-6 rounded-xl backdrop-blur-sm transition-all duration-300 flex flex-col justify-between group"
             >
@@ -115,7 +101,7 @@ export default function Acknowledgements() {
           ))}
         </div>
 
-        {/* Mensaje institucional final */}
+        {/* Cita final */}
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -124,7 +110,7 @@ export default function Acknowledgements() {
           className="mt-16 text-center border-t border-white/5 pt-10"
         >
           <p className="text-xs font-serif italic text-neutral-400">
-            "Construir confianza es el primer paso para consolidar el futuro." — Equipo Directivo GW
+            {t('acknowledgements.cita', '"Construir confianza es el primer paso para consolidar el futuro." — Equipo Directivo GW')}
           </p>
         </motion.div>
 

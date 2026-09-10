@@ -76,7 +76,41 @@ const resources = {
         "formEmailAvisoPrivacidad": "Nos comprometemos a proteger tu privacidad y nunca compartiremos tus datos.",
         "formEmailAvisoPrivacidadLink": "Política de Privacidad",
         "formEmailAvisoPrivacidadLinkHref": "/politica-de-privacidad"
-      }
+      },
+      "faq": {
+  "badge": "Dudas Habituales",
+  "titulo": "Preguntas Frecuentes de Inversores",
+  "descripcion": "Todo lo que necesitás saber sobre la adquisición, rentabilidad y seguridad de tu unidad en GW.",
+  "q1": "¿Por qué invertir en desarrollos inmobiliarios en Asunción?",
+  "a1": "Paraguay ofrece una de las economías más estables de la región, baja carga impositiva (régimen 10-10-10) y rentabilidades en dólares que oscilan entre el 8% y el 12% anual por renta temporal o tradicional.",
+  "q2": "¿Puedo comprar una unidad siendo inversor extranjero?",
+  "a2": "Sí. La legislación paraguaya otorga igualdad de derechos a inversores locales y extranjeros. El proceso puede gestionarse de forma remota mediante apoderado o firma certificada con total seguridad jurídica.",
+  "q3": "¿Cuáles son los planes de financiación disponibles para GW Del Sol?",
+  "a3": "Ofrecemos esquemas flexibles con anticipo inicial y saldo financiado en cuotas durante el plazo de obra, además de condiciones especiales y descuentos por pago al contado.",
+  "q4": "¿GW se encarga de la administración de la propiedad tras la entrega?",
+  "a4": "Brindamos asesoramiento integral y alianzas de property management para gestionar alquileres temporales (Airbnb/Booking) o contratos corporativos a largo plazo sin que el inversor tenga que ocuparse del día a día.",
+  "dudaDirecta": "¿Tenés una consulta específica sobre tu esquema de pago?",
+  "asesorBtn": "Consultá directamente con un asesor"
+},
+"acknowledgements": {
+  "badge": "Alianzas & Confianza",
+  "titulo": "Agradecimientos & Respaldo",
+  "descripcion": "Detrás de cada metro cuadrado construido y de cada rentabilidad proyectada hay un equipo multidisciplinario y aliados que hacen posible la excelencia de GW.",
+  "catArquitectura": "Arquitectura & Diseño",
+  "nombreArquitectura": "Estudio de Arquitectura & Urbanismo",
+  "detalleArquitectura": "Diseño estructural y desarrollo de concepto espacial premium.",
+  "catIngenieria": "Ingeniería & Construcción",
+  "nombreIngenieria": "Constructora & Fiscalización",
+  "detalleIngenieria": "Dirección de obra, normas de calidad y seguridad edilicia.",
+  "catFinanciero": "Respaldo Financiero & Legal",
+  "nombreFinanciero": "Fiduciaria & Entidades Aliadas",
+  "detalleFinanciero": "Garantía legal, estructuración de fideicomisos y seguridad jurídica.",
+  "catInversores": "Comunidad de Inversores",
+  "nombreInversores": "Red de Inversores Regionales",
+  "detalleInversores": "Confianza y proyección en cada etapa de crecimiento.",
+  "cita": "\"Construir confianza es el primer paso para consolidar el futuro.\" — Equipo Directivo GW"
+}
+
     }
   },
   pt: {
@@ -155,7 +189,40 @@ const resources = {
         "formEmailAvisoPrivacidad": "Comprometemo-nos a proteger sua privacidade e nunca compartilharemos seus dados.",
         "formEmailAvisoPrivacidadLink": "Política de Privacidade",
         "formEmailAvisoPrivacidadLinkHref": "/politica-de-privacidade"
-      }
+      },
+      "faq": {
+  "badge": "Dúvidas Frequentes",
+  "titulo": "Perguntas Frequentes de Investidores",
+  "descripcion": "Tudo o que você precisa saber sobre aquisição, rentabilidade e segurança da sua unidade na GW.",
+  "q1": "Por que investir no mercado imobiliário de Assunção?",
+  "a1": "O Paraguai oferece uma das economias mais estáveis da região, baixa carga tributária (regime 10-10-10) e rentabilidades em dólares entre 8% e 12% ao ano.",
+  "q2": "Posso comprar um imóvel sendo investidor estrangeiro?",
+  "a2": "Sim. A legislação paraguaia garante igualdade de direitos para investidores locais e estrangeiros. O processo pode ser feito remotamente com total segurança jurídica.",
+  "q3": "Quais são os planos de financiamento para o GW Del Sol?",
+  "a3": "Oferecemos condições flexíveis com entrada e parcelamento durante a obra, além de descontos especiais para pagamento à vista.",
+  "q4": "A GW gerencia o imóvel após a entrega?",
+  "a4": "Oferecemos parcerias de property management para locação por temporada (Airbnb/Booking) ou contratos corporativos sem preocupações para o investidor.",
+  "dudaDirecta": "Tem alguma dúvida sobre planos de pagamento?",
+  "asesorBtn": "Fale diretamente com um consultor"
+},
+"acknowledgements": {
+  "badge": "Parcerias & Confiança",
+  "titulo": "Agradecimentos & Apoio",
+  "descripcion": "Atrás de cada metro quadrado construído e cada rentabilidade projetada há uma equipe multidisciplinar e parceiros que tornam possível a excelência da GW.",
+  "catArquitectura": "Arquitetura & Design",
+  "nombreArquitectura": "Escritório de Arquitetura & Urbanismo",
+  "detalleArquitectura": "Projeto estrutural e desenvolvimento de conceito espacial exclusivo.",
+  "catIngenieria": "Engenharia & Construção",
+  "nombreIngenieria": "Construtora & Fiscalização",
+  "detalleIngenieria": "Direção de obras, padrões de qualidade e segurança na construção.",
+  "catFinanciero": "Apoio Financeiro & Jurídico",
+  "nombreFinanciero": "Fiduciária & Entidades Parceiras",
+  "detalleFinanciero": "Garantia jurídica, estruturação de fundos e máxima segurança.",
+  "catInversores": "Comunidade de Investidores",
+  "nombreInversores": "Rede de Investidores Regionais",
+  "detalleInversores": "Confiança e expansão em cada etapa do desenvolvimento.",
+  "cita": "\"Construir confiança é o primeiro passo para consolidar o futuro.\" — Diretoria GW"
+}
     }
   },
   en: {
@@ -233,7 +300,40 @@ const resources = {
         "formEmailAvisoPrivacidad": "We are committed to protecting your privacy and will never share your data.",
         "formEmailAvisoPrivacidadLink": "Privacy Policy",
         "formEmailAvisoPrivacidadLinkHref": "/privacy-policy"
-      }
+      },
+      "faq": {
+  "badge": "Common Questions",
+  "titulo": "Investor FAQ",
+  "descripcion": "Everything you need to know about acquisition, yields, and security at GW Del Sol.",
+  "q1": "Why invest in real estate in Asunción?",
+  "a1": "Paraguay features one of the most stable economies in South America, low tax rates (10-10-10 system), and USD yields between 8% and 12% annually.",
+  "q2": "Can foreign investors buy property in Paraguay?",
+  "a2": "Yes. Paraguayan law provides equal rights to domestic and international investors. The process can be completed remotely with full legal security.",
+  "q3": "What financing options are available for GW Del Sol?",
+  "a3": "We offer flexible payment plans with a down payment and construction installments, along with special discounts for cash payments.",
+  "q4": "Does GW manage the property after handover?",
+  "a4": "We partner with top property management firms to handle short-term rentals (Airbnb/Booking) and corporate leases turnkey.",
+  "dudaDirecta": "Have a specific question about payment structures?",
+  "asesorBtn": "Speak directly with an advisor"
+},
+"acknowledgements": {
+  "badge": "Partners & Trust",
+  "titulo": "Acknowledgements & Backing",
+  "descripcion": "Behind every square meter built and projected return is a multidisciplinary team and strategic partners making GW's excellence possible.",
+  "catArquitectura": "Architecture & Design",
+  "nombreArquitectura": "Architecture & Urban Planning Firm",
+  "detalleArquitectura": "Structural design and premium spatial concept development.",
+  "catIngenieria": "Engineering & Construction",
+  "nombreIngenieria": "General Contractor & Supervision",
+  "detalleIngenieria": "Site management, quality standards, and building safety.",
+  "catFinanciero": "Financial & Legal Backing",
+  "nombreFinanciero": "Trustee & Financial Partners",
+  "detalleFinanciero": "Legal security, escrow structuring, and complete compliance.",
+  "catInversores": "Investor Network",
+  "nombreInversores": "Regional Investor Community",
+  "detalleInversores": "Trust and ongoing growth across every milestone.",
+  "cita": "\"Building trust is the first step to securing the future.\" — GW Executive Team"
+}
     }
   }
 };

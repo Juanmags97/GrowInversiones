@@ -7,6 +7,7 @@ import ProjectShowcase from '../components/projectshowcase';
 import IntegrationSection from '../components/integrationsection';
 import Footer from '../components/Footer';
 import Acknowledgements from '../components/Acknowledgements';
+import FAQ from '../components/FAQ';
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
       <ParaguayStats />
       <AboutUs />
       <ProjectShowcase />
+      <FAQ />
       <IntegrationSection />
       <Acknowledgements />
       <Footer />
