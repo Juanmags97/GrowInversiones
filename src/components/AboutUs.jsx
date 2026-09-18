@@ -39,11 +39,12 @@ export default function AboutUs() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative h-[520px] rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957]"
           >
-            <img
-              src={fotoSocios}
-              alt="Socios GW"
-              className="w-full h-full object-cover object-top transition-all duration-700"
-            />
+            // AHORA
+<img
+  src="/FotosSocios.webp"
+  alt="Socios GW"
+  className="w-full h-full object-cover object-top transition-all duration-700"
+/>
           </motion.div>
 
           {/* BLOQUE DERECHO: MISIÓN, VISIÓN, VALORES TRADUCIDOS */}
