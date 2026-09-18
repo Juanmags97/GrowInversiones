@@ -75,7 +75,7 @@ export default function Acknowledgements() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.1, }}
+              transition={{ duration: 0.1,}}
               whileHover={{ y: -5 }}
               className="bg-[#1D2733]/40 border border-white/10 hover:border-[#DFC173]/40 p-6 rounded-xl backdrop-blur-sm transition-all duration-300 flex flex-col justify-between group"
             >
