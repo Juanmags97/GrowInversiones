@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="relative h-screen bg-[#1D2733] overflow-hidden flex items-center pt-20">
-      
+
       {/* BACKGROUND INTERACTIVO / CARRUSEL */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
+
         {/* TEXTOS PRINCIPALES CON SOPORTE DE IDIOMA */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -56,15 +56,15 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white leading-tight">
             {t('hero.titulo') !== 'hero.titulo' ? t('hero.titulo') : "Desarrollamos espacios para quienes eligen crecer."}
           </h1>
-          
+
           <p className="text-neutral-400 mt-6 max-w-md text-sm leading-relaxed">
             GW DEL SOL, un desarrollo en el corazón de Asunción pensado para vivir, invertir y proyectar el futuro.
           </p>
-          
+
           <div className="mt-8 flex space-x-4">
             {/* BOTÓN CONECTADO AL PDF EN PUBLIC/ */}
             <a
-              href={`${import.meta.env.BASE_URL}BrochureGwDelSol.pdf`}
+              href="/BrochureGwDelSol.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold px-8 py-3 rounded text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-[#DFC173]/20 transition-all text-center"
@@ -73,18 +73,18 @@ export default function Hero() {
             </a>
           </div>
         </motion.div>
-        
+
       </div>
 
       {/* 🧭 CTA PRE-SCROLL / SCROLL INDICATOR GW */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
         className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center select-none"
       >
         <a
-          href="#stats" 
+          href="#stats"
           className="group flex flex-col items-center gap-2 text-neutral-400 hover:text-[#DFC173] transition-colors duration-300 cursor-pointer"
           aria-label="Desplazarse hacia las estadísticas e inversiones"
         >
@@ -98,10 +98,10 @@ export default function Hero() {
           </div>
 
           {/* Flecha hacia abajo */}
-          <svg 
-            className="w-4 h-4 text-[#DFC173]/80 group-hover:translate-y-1 transition-transform" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="w-4 h-4 text-[#DFC173]/80 group-hover:translate-y-1 transition-transform"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 9l-7 7-7-7" />
