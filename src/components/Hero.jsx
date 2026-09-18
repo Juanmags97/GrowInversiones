@@ -64,7 +64,7 @@ export default function Hero() {
           <div className="mt-8 flex space-x-4">
             {/* BOTÓN CONECTADO AL PDF EN PUBLIC/ */}
             <a
-              href="/BrochureGwDelSol.pdf"
+              href="/Brochure.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-[#DFC173] to-[#D5A361] text-[#1D2733] font-bold px-8 py-3 rounded text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-[#DFC173]/20 transition-all text-center"
