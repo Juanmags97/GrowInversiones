@@ -72,7 +72,7 @@ export default function ProjectShowcase() {
 
                 {/* BOTÓN CONECTADO AL PDF EN PUBLIC/ */}
                 <a
-                  href={`${import.meta.env.BASE_URL}BrochureGwDelSol.pdf`}
+                  href="https://drive.google.com/file/d/1U1Owe0ZtRZywVTStyDMiUCTUN5ZZJcMb/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block border border-[#DFC173] text-[#DFC173] px-6 py-2.5 rounded text-xs uppercase tracking-widest hover:bg-[#DFC173] hover:text-[#1D2733] transition-all duration-300 font-bold m-auto text-center"
