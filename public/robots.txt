@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# IMPORTANTE: no bloquear /assets/
+# El sitio es una SPA: todo el contenido se genera con JavaScript.
+# Si se bloquea /assets/, Googlebot no puede descargar el bundle JS
+# y ve la pagina vacia.
+
+Sitemap: https://gwdesarrollos.com.py/sitemap.xml

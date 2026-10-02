@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import logoNuevo from '../../Public/gsNuevo.png';
-import logoArriba from '../../Public/gw-del-sol.png';
-import video from '../../Public/VideoHorizontal.mp4';
+import logoNuevo from '../../public/gsNuevo.png';
+import logoArriba from '../../public/gw-del-sol.png';
+import video from '../../public/VideoHorizontal.mp4';
 
 export default function ProjectShowcase() {
   const { t } = useTranslation();

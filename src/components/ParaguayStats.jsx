@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import fondo from '../../Public/FondoStats.png';
+import fondo from '../../public/FondoStats.png';
 
 // Componente animado para la métrica 1 (+4,5%)
 function CounterPBI() {

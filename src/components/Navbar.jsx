@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // <-- Importamos el hook de traducción
-import logo from '../../Public/GwLogo.png';
+import logo from '../../public/GwLogo.png';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation(); // <-- Declaramos las funciones de traducción

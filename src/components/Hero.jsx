@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import DeptoPanoramico from '../../Public/DeptoPanoramico.webp';
-import FachadaPanoramica from '../../Public/FachadaPanoramica.webp';
-import RenderRecepcion from '../../Public/RenderRecepcion.webp';
+import DeptoPanoramico from '../../public/DeptoPanoramico.webp';
+import FachadaPanoramica from '../../public/FachadaPanoramica.webp';
+import RenderRecepcion from '../../public/RenderRecepcion.webp';
 
 // Lista de imágenes para el carrusel
 const IMAGES = [
