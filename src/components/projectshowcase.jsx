@@ -147,33 +147,6 @@ export default function ProjectShowcase() {
     <section id="del-sol" className="pt-24 pb-10 bg-[#1D2733] border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* ENCABEZADO PRINCIPAL */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 flex flex-col items-center justify-center space-y-4"
-        >
-          <span className="text-[#DFC173] text-xs font-bold uppercase tracking-widest">
-            {t('showcase.lanzamiento')}
-          </span>
-          <img
-            src={logoArriba}
-            alt="GW Del Sol"
-            className="h-20 md:h-[160px] w-auto object-contain mt-2"
-          />
-        </motion.div>
-
-        {/* VIDEO PRINCIPAL A ANCHO COMPLETO */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.99 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957] aspect-video w-full mb-24"
-        >
-          <video src={video} controls className="w-full h-full object-cover" />
-        </motion.div>
-
         {/* ===================== BLOQUE DE MARCA: UNA SOLA COLUMNA ===================== */}
         <div className="flex flex-col items-center text-center">
 
@@ -291,6 +264,35 @@ export default function ProjectShowcase() {
         {/* ===================== AVANCE DE OBRA: VIDEO VERTICAL + TEXTO ===================== */}
         <div className="mt-28">
           <ObraSection />
+        </div>
+
+        <div className="mt-28">
+          {/* ===================== LANZAMIENTO EXCLUSIVO: ENCABEZADO + VIDEO ===================== */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 flex flex-col items-center justify-center space-y-4"
+          >
+            <span className="text-[#DFC173] text-xs font-bold uppercase tracking-widest">
+              {t('showcase.lanzamiento')}
+            </span>
+            <img
+              src={logoArriba}
+              alt="GW Del Sol"
+              className="h-20 md:h-[160px] w-auto object-contain mt-2"
+            />
+          </motion.div>
+
+          {/* VIDEO PRINCIPAL A ANCHO COMPLETO */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.99 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957] aspect-video w-full"
+          >
+            <video src={video} controls className="w-full h-full object-cover" />
+          </motion.div>
         </div>
 
       </div>

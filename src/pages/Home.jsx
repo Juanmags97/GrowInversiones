@@ -16,8 +16,8 @@ export default function Home() {
       <Hero />
       <ParaguayStats />
       <AboutUs />
-      <InstagramFeed />
       <ProjectShowcase />
+      <InstagramFeed />
       <FAQ />
       <IntegrationSection />
       <Acknowledgements />
