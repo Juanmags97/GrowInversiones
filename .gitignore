@@ -7,3 +7,6 @@ dist/
 !.env.example
 npm-debug.log*
 dist-ssr/
+
+# Archivos originales en alta resolución (no se publican)
+originales/
