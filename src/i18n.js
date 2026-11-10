@@ -39,7 +39,54 @@ const resources = {
       "showcase": {
         "lanzamiento": "Lanzamiento Exclusivo",
         "descripcion": "Ubicado en el polo de mayor crecimiento corporativo y residencial de Asunción, a pasos del Shopping del Sol y del World Trade Center. Un diseño arquitectónico de vanguardia con terminaciones de lujo.",
-        "boton": "Conocer Proyecto"
+        "boton": "Conocer Proyecto",
+        "ubicacion": "Ubicación",
+        "ubicacionTexto": "A pasos del Shopping del Sol y del World Trade Center, en el polo de mayor crecimiento de Asunción.",
+        "comoLlegar": "Cómo llegar",
+        "obra": {
+          "etiqueta": "Avance de obra",
+          "titulo": "GW DEL SOL | ¡Iniciamos obra!",
+          "bajada": "Un nuevo proyecto comienza a hacerse realidad en Asunción, Paraguay.",
+          "parrafo1Pre": "En",
+          "parrafo1Post": "damos inicio a una nueva etapa, avanzando en la construcción de un desarrollo inmobiliario que combina diseño, modernidad y una ubicación estratégica, pensado para quienes buscan vivir e invertir con proyección a futuro.",
+          "parrafo2": "Cada avance nos acerca un paso más a convertir este proyecto en realidad.",
+          "avance": "Avance de obra",
+          "etapaActual": "Etapa inicial de construcción",
+          "enObra": "En obra",
+          "entrega": "Entrega estimada",
+          "entregaFecha": "Último trimestre de 2028",
+          "cierreDestacado": "¡Esto recién comienza!",
+          "cierre": "Seguí de cerca cada etapa de construcción y descubrí cómo GW del Sol va tomando forma.",
+          "explorar": "Pasá el cursor o tocá cada etapa para ver el recorrido de la obra",
+          "completada": "Completada",
+          "enCurso": "En curso",
+          "proxima": "Próxima",
+          "silenciar": "Silenciar video",
+          "activarSonido": "Activar sonido",
+          "pausar": "Pausar video",
+          "reproducir": "Reproducir video",
+          "etapas": {
+            "inicio": { "nombre": "Inicio de obra", "detalle": "Limpieza del terreno, movimiento de suelo y fundaciones." },
+            "estructura": { "nombre": "Estructura", "detalle": "Hormigón armado, losas y columnas de todos los niveles." },
+            "cerramientos": { "nombre": "Cerramientos", "detalle": "Mampostería, aberturas e instalaciones." },
+            "terminaciones": { "nombre": "Terminaciones", "detalle": "Revestimientos, amenities y detalles de diseño." },
+            "entrega": { "nombre": "Entrega", "detalle": "Entrega de unidades a sus propietarios." }
+          }
+        },
+        "galeria": {
+          "titulo": "Galería del proyecto",
+          "anterior": "Imagen anterior",
+          "siguiente": "Imagen siguiente",
+          "irA": "Ir a la imagen",
+          "slides": {
+            "terraza": { "titulo": "Rooftop con vista a la ciudad", "tag": "Amenities" },
+            "recepcion": { "titulo": "Lobby y recepción", "tag": "Áreas comunes" },
+            "living": { "titulo": "Living y cocina integrados", "tag": "Unidades" },
+            "dormitorio": { "titulo": "Dormitorio con vista panorámica", "tag": "Unidades" },
+            "monoambiente": { "titulo": "Monoambiente", "tag": "Unidades" },
+            "sala": { "titulo": "Sala de reuniones", "tag": "Amenities" }
+          }
+        }
       },
       "integration": {
         "newsletterBoton": "Suscribirme",
@@ -150,7 +197,54 @@ const resources = {
       "showcase": {
         "lanzamiento": "Lançamento Exclusivo",
         "descripcion": "Localizado no polo de maior crescimento corporativo e residencial de Assunção, a poucos passos do Shopping del Sol e do World Trade Center. Um projeto arquitetônico de vanguarda com acabamentos de luxo.",
-        "boton": "Conhecer o Projeto"
+        "boton": "Conhecer o Projeto",
+        "ubicacion": "Localização",
+        "ubicacionTexto": "A poucos passos do Shopping del Sol e do World Trade Center, no polo de maior crescimento de Assunção.",
+        "comoLlegar": "Como chegar",
+        "obra": {
+          "etiqueta": "Andamento da obra",
+          "titulo": "GW DEL SOL | Iniciamos a obra!",
+          "bajada": "Um novo projeto começa a se tornar realidade em Assunção, Paraguai.",
+          "parrafo1Pre": "No",
+          "parrafo1Post": "damos início a uma nova etapa, avançando na construção de um empreendimento imobiliário que combina design, modernidade e uma localização estratégica, pensado para quem busca morar e investir com visão de futuro.",
+          "parrafo2": "Cada avanço nos aproxima um passo de transformar este projeto em realidade.",
+          "avance": "Andamento da obra",
+          "etapaActual": "Etapa inicial de construção",
+          "enObra": "Em obra",
+          "entrega": "Entrega estimada",
+          "entregaFecha": "Último trimestre de 2028",
+          "cierreDestacado": "Isto está só começando!",
+          "cierre": "Acompanhe de perto cada etapa da construção e descubra como o GW del Sol vai ganhando forma.",
+          "explorar": "Passe o cursor ou toque em cada etapa para ver o percurso da obra",
+          "completada": "Concluída",
+          "enCurso": "Em andamento",
+          "proxima": "Próxima",
+          "silenciar": "Silenciar vídeo",
+          "activarSonido": "Ativar som",
+          "pausar": "Pausar vídeo",
+          "reproducir": "Reproduzir vídeo",
+          "etapas": {
+            "inicio": { "nombre": "Início da obra", "detalle": "Limpeza do terreno, movimentação de solo e fundações." },
+            "estructura": { "nombre": "Estrutura", "detalle": "Concreto armado, lajes e pilares de todos os níveis." },
+            "cerramientos": { "nombre": "Vedações", "detalle": "Alvenaria, esquadrias e instalações." },
+            "terminaciones": { "nombre": "Acabamentos", "detalle": "Revestimentos, áreas comuns e detalhes de design." },
+            "entrega": { "nombre": "Entrega", "detalle": "Entrega das unidades aos proprietários." }
+          }
+        },
+        "galeria": {
+          "titulo": "Galeria do projeto",
+          "anterior": "Imagem anterior",
+          "siguiente": "Próxima imagem",
+          "irA": "Ir para a imagem",
+          "slides": {
+            "terraza": { "titulo": "Rooftop com vista para a cidade", "tag": "Amenities" },
+            "recepcion": { "titulo": "Lobby e recepção", "tag": "Áreas comuns" },
+            "living": { "titulo": "Sala e cozinha integradas", "tag": "Unidades" },
+            "dormitorio": { "titulo": "Quarto com vista panorâmica", "tag": "Unidades" },
+            "monoambiente": { "titulo": "Studio", "tag": "Unidades" },
+            "sala": { "titulo": "Sala de reuniões", "tag": "Amenities" }
+          }
+        }
       },
       "integration": {
         "newsletterTitulo": "Newsletter",
@@ -262,7 +356,54 @@ const resources = {
       "showcase": {
         "lanzamiento": "Exclusive Launch",
         "descripcion": "Located in the hub of greatest corporate and residential growth in Asunción, just steps away from Shopping del Sol and the World Trade Center. A cutting-edge architectural design with luxury finishes.",
-        "boton": "Discover Project"
+        "boton": "Discover Project",
+        "ubicacion": "Location",
+        "ubicacionTexto": "Steps away from Shopping del Sol and the World Trade Center, in Asunción's fastest-growing hub.",
+        "comoLlegar": "Get directions",
+        "obra": {
+          "etiqueta": "Construction progress",
+          "titulo": "GW DEL SOL | Construction has begun!",
+          "bajada": "A new project is starting to become reality in Asunción, Paraguay.",
+          "parrafo1Pre": "At",
+          "parrafo1Post": "we are starting a new stage, moving forward with the construction of a real estate development that combines design, modernity and a strategic location, created for those who want to live and invest with a view to the future.",
+          "parrafo2": "Every step forward brings us closer to making this project a reality.",
+          "avance": "Construction progress",
+          "etapaActual": "Initial construction stage",
+          "enObra": "Under construction",
+          "entrega": "Estimated delivery",
+          "entregaFecha": "Last quarter of 2028",
+          "cierreDestacado": "This is just the beginning!",
+          "cierre": "Follow every construction stage closely and see how GW del Sol takes shape.",
+          "explorar": "Hover or tap each stage to explore the construction timeline",
+          "completada": "Completed",
+          "enCurso": "In progress",
+          "proxima": "Upcoming",
+          "silenciar": "Mute video",
+          "activarSonido": "Unmute video",
+          "pausar": "Pause video",
+          "reproducir": "Play video",
+          "etapas": {
+            "inicio": { "nombre": "Groundbreaking", "detalle": "Site clearing, earthworks and foundations." },
+            "estructura": { "nombre": "Structure", "detalle": "Reinforced concrete, slabs and columns on every level." },
+            "cerramientos": { "nombre": "Enclosure", "detalle": "Masonry, windows and building systems." },
+            "terminaciones": { "nombre": "Finishes", "detalle": "Cladding, amenities and design details." },
+            "entrega": { "nombre": "Handover", "detalle": "Units delivered to their owners." }
+          }
+        },
+        "galeria": {
+          "titulo": "Project gallery",
+          "anterior": "Previous image",
+          "siguiente": "Next image",
+          "irA": "Go to image",
+          "slides": {
+            "terraza": { "titulo": "Rooftop with city views", "tag": "Amenities" },
+            "recepcion": { "titulo": "Lobby & reception", "tag": "Common areas" },
+            "living": { "titulo": "Open living & kitchen", "tag": "Units" },
+            "dormitorio": { "titulo": "Bedroom with panoramic view", "tag": "Units" },
+            "monoambiente": { "titulo": "Studio apartment", "tag": "Units" },
+            "sala": { "titulo": "Meeting room", "tag": "Amenities" }
+          }
+        }
       },
       "integration": {
         "newsletterTitulo": "Newsletter",

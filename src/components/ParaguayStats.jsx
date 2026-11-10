@@ -17,7 +17,7 @@ function CounterPBI() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
 }
 
 // Componente animado para la métrica 2 (+USD 1.200 M)
@@ -34,14 +34,14 @@ function CounterInversion() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
 }
 
 export default function ParaguayStats() {
   const { t } = useTranslation();
 
   return (
-    <section id="stats" className="relative py-20 text-white border-t border-white/5 overflow-hidden">
+    <section id="stats" className="relative py-28 md:py-36 text-white border-t border-white/5 overflow-hidden">
       
       {/* 1. IMAGEN DE FONDO MÁS VISIBLE Y NÍTIDA */}
       <div 
@@ -55,17 +55,17 @@ export default function ParaguayStats() {
       </div>
 
       {/* 2. CONTENIDO PRINCIPAL */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 xl:px-20 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.4fr)] gap-12 xl:gap-20 items-center">
         
         {/* COLUMNA IZQUIERDA: TÍTULO PRINCIPAL TRADUCIDO */}
-        <div className="lg:col-span-1">
-          <h2 className="text-3xl md:text-4xl font-serif text-white leading-tight font-bold drop-shadow-lg">
+        <div>
+          <h2 className="text-4xl md:text-5xl font-serif text-white leading-[1.15] font-bold max-w-xl text-balance drop-shadow-lg">
             {t('stats.subtitulo')}
           </h2>
         </div>
 
         {/* COLUMNA DERECHA: LAS 4 MÉTRICAS EN HORIZONTAL */}
-        <div className="lg:col-span-2 grid-cols-4 md:flex gap-8 pt-2">
+        <div className="grid grid-cols-2 gap-10 md:flex md:gap-8 xl:gap-12 pt-2">
 
           <div className='hidden border border-white/30 w-0 md:block'></div>
           
@@ -76,10 +76,10 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group space-y-2 cursor-default flex-1"
+            className="group flex flex-col gap-3 cursor-default flex-1"
           >
             <CounterPBI />
-            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
+            <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.pbi')}
             </p>
           </motion.div>
@@ -93,10 +93,10 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group space-y-2 cursor-default flex-1"
+            className="group flex flex-col gap-3 cursor-default flex-1"
           >
             <CounterInversion />
-            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
+            <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.inversion')}
             </p>
           </motion.div>
@@ -110,10 +110,10 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group space-y-2 cursor-default flex-1"
+            className="group flex flex-col gap-3 cursor-default flex-1"
           >
-            <span className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">2°</span>
-            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
+            <span className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">2°</span>
+            <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.rentabilidad')}
             </p>
           </motion.div>
@@ -127,10 +127,10 @@ export default function ParaguayStats() {
             whileHover={{ y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group space-y-2 cursor-default flex-1"
+            className="group flex flex-col gap-3 cursor-default flex-1"
           >
-            <span className="text-2xl md:text-3xl font-bold text-white block drop-shadow-lg">Top 10</span>
-            <p className="text-xs text-white font-bold tracking-wide uppercase drop-shadow-md">
+            <span className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">Top 10</span>
+            <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.calidadVida')}
             </p>
           </motion.div>

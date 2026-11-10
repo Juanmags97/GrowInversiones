@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function IntegrationSection() {
@@ -19,17 +19,6 @@ export default function IntegrationSection() {
   const [loading, setLoading] = useState(false);
   const [enviado, setEnviado] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
-
-  useEffect(() => {
-    const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = "https://elfsightcdn.com/platform.js";
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -87,21 +76,6 @@ export default function IntegrationSection() {
   return (
     <section className="py-24 bg-[#1D2733] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 space-y-16">
-
-        {/* FEED DE INSTAGRAM CON FALLBACK */}
-        <div className="w-full">
-          <div className="elfsight-app-bf6a6c30-1d85-4c56-a907-aca8ffe9a590" data-elfsight-app-lazy />
-          <div className="mt-4 text-center">
-            <a 
-              href="https://www.instagram.com/gwdesarrollos.py" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-xs font-mono text-[#DFC173]/80 hover:text-[#DFC173] transition-colors"
-            >
-              Seguinos en @gwdesarrollos.py →
-            </a>
-          </div>
-        </div>
 
         {/* FORMULARIO DE LEADS */}
         <div id="contacto" className="bg-[#1E3957] border border-white/5 p-8 rounded-2xl shadow-2xl w-full">

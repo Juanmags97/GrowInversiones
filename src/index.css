@@ -86,3 +86,8 @@ h4,
 
   }
 }
+/* Barra de progreso del carrusel del showcase (se pausa con animation-play-state) */
+@keyframes gw-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}

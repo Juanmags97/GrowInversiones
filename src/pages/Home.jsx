@@ -5,6 +5,7 @@ import ParaguayStats from '../components/ParaguayStats';
 import AboutUs from '../components/AboutUs';
 import ProjectShowcase from '../components/projectshowcase';
 import IntegrationSection from '../components/integrationsection';
+import InstagramFeed from '../components/InstagramFeed';
 import Footer from '../components/Footer';
 import Acknowledgements from '../components/Acknowledgements';
 import FAQ from '../components/FAQ';
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <ParaguayStats />
       <AboutUs />
+      <InstagramFeed />
       <ProjectShowcase />
       <FAQ />
       <IntegrationSection />

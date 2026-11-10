@@ -34,7 +34,7 @@ export default function Hero() {
             src={IMAGES[index]}
             alt={["Departamento panorámico GW Del Sol en Asunción", "Fachada panorámica del proyecto GW Del Sol", "Render de recepción del edificio GW Del Sol"][index]}
             initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 0.35, scale: 1 }}
+            animate={{ opacity: 0.6, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             className="w-full h-full object-cover"
@@ -42,7 +42,7 @@ export default function Hero() {
           />
         </AnimatePresence>
         {/* Degradado adaptado al color oficial #1D2733 */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1D2733] via-transparent to-[#1D2733]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1D2733] via-transparent to-[#1D2733]/50" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -57,7 +57,7 @@ export default function Hero() {
             {t('hero.titulo') !== 'hero.titulo' ? t('hero.titulo') : "Desarrollamos espacios para quienes eligen crecer."}
           </h1>
 
-          <p className="text-neutral-400 mt-6 max-w-md text-sm leading-relaxed">
+          <p className="text-neutral-200 mt-6 max-w-md text-sm leading-relaxed">
             GW DEL SOL, un desarrollo en el corazón de Asunción pensado para vivir, invertir y proyectar el futuro.
           </p>
 

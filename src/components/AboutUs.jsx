@@ -48,17 +48,17 @@ export default function AboutUs() {
           </motion.div>
 
           {/* BLOQUE DERECHO: MISIÓN, VISIÓN, VALORES TRADUCIDOS */}
-          <div className="space-y-6">
+          <div className="flex flex-col gap-6 lg:h-[520px]">
 
             {/* Misión */}
             <motion.div
               whileHover={{ x: 6 }}
-              className="p-5 bg-[#1E3957] border-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
+              className="flex-1 flex flex-col justify-center p-6 lg:p-8 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
-              <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-1">
+              <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-3">
                 {t('about.misionTitulo')}
               </h4>
-              <p className="text-xs text-neutral-300">
+              <p className="text-sm text-neutral-300 leading-relaxed">
                 {t('about.misionTexto')}
               </p>
             </motion.div>
@@ -66,12 +66,12 @@ export default function AboutUs() {
             {/* Visión */}
             <motion.div
               whileHover={{ x: 6 }}
-              className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
+              className="flex-1 flex flex-col justify-center p-6 lg:p-8 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
-              <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-1">
+              <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-3">
                 {t('about.visionTitulo')}
               </h4>
-              <p className="text-xs text-neutral-300">
+              <p className="text-sm text-neutral-300 leading-relaxed">
                 {t('about.visionTexto')}
               </p>
             </motion.div>
@@ -79,12 +79,12 @@ export default function AboutUs() {
             {/* Valores */}
             <motion.div
               whileHover={{ x: 6 }}
-              className="p-5 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
+              className="flex-1 flex flex-col justify-center p-6 lg:p-8 bg-[#1E3957] border-l-2 border-[#DFC173] rounded-xl border-y border-r border-white/5"
             >
-              <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-1">
+              <h4 className="text-[#DFC173] text-xs font-bold uppercase tracking-widest mb-3">
                 {t('about.valoresTitulo')}
               </h4>
-              <p className="text-xs text-neutral-300">
+              <p className="text-sm text-neutral-300 leading-relaxed">
                 {t('about.valoresTexto')}
               </p>
             </motion.div>
