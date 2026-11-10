@@ -17,7 +17,7 @@ function CounterPBI() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
 }
 
 // Componente animado para la métrica 2 (+USD 1.200 M)
@@ -34,7 +34,7 @@ function CounterInversion() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
 }
 
 export default function ParaguayStats() {
@@ -59,7 +59,7 @@ export default function ParaguayStats() {
         
         {/* COLUMNA IZQUIERDA: TÍTULO PRINCIPAL TRADUCIDO */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-serif text-white leading-[1.15] font-bold max-w-xl text-balance drop-shadow-lg">
+          <h2 className="text-3xl md:text-[40px] font-serif text-white leading-[1.15] font-bold max-w-xl text-balance drop-shadow-lg">
             {t('stats.subtitulo')}
           </h2>
         </div>
@@ -112,7 +112,7 @@ export default function ParaguayStats() {
             transition={{ duration: 0.5 }}
             className="group flex flex-col gap-3 cursor-default flex-1"
           >
-            <span className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">2°</span>
+            <span className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">2°</span>
             <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.rentabilidad')}
             </p>
@@ -129,7 +129,7 @@ export default function ParaguayStats() {
             transition={{ duration: 0.5 }}
             className="group flex flex-col gap-3 cursor-default flex-1"
           >
-            <span className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white block whitespace-nowrap drop-shadow-lg">Top 10</span>
+            <span className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">Top 10</span>
             <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.calidadVida')}
             </p>
