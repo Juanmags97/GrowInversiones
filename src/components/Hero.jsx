@@ -77,11 +77,14 @@ export default function Hero() {
       </div>
 
       {/* 🧭 CTA PRE-SCROLL / SCROLL INDICATOR GW */}
+      {/* El centrado lo hace este contenedor: framer-motion pisa el "transform" del elemento animado,
+          así que un -translate-x-1/2 en el motion.div se pierde y el indicador queda corrido */}
+      <div className="absolute inset-x-0 bottom-6 sm:bottom-8 z-20 flex justify-center pointer-events-none">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center select-none"
+        className="flex flex-col items-center select-none pointer-events-auto"
       >
         <a
           href="#stats"
@@ -108,6 +111,7 @@ export default function Hero() {
           </svg>
         </a>
       </motion.div>
+      </div>
 
     </section>
   );
