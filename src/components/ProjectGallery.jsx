@@ -68,6 +68,7 @@ export default function ProjectGallery() {
   const reduce = useReducedMotion();
   const rootRef = useRef(null);
   const inView = useInView(rootRef, { amount: 0.35 });
+  const nearView = useInView(rootRef, { once: true, margin: '600px 0px' });
 
   const [[index, direction], setState] = useState([0, 1]);
   const [hovered, setHovered] = useState(false);
@@ -97,10 +98,12 @@ export default function ProjectGallery() {
   }, []);
 
   // Precargar la siguiente imagen para que la transición no espere a la red
+  // Solo cuando la galería está cerca de la pantalla (no al abrir la página)
   useEffect(() => {
+    if (!nearView) return;
     const img = new Image();
     img.src = SLIDES[(index + 1) % SLIDES.length].src;
-  }, [index]);
+  }, [index, nearView]);
 
   const onKeyDown = (e) => {
     if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
@@ -125,15 +128,15 @@ export default function ProjectGallery() {
       {/* CABECERA: título de la galería + contador tipo odómetro + flechas */}
       <div className="flex items-end justify-between gap-6 mb-6">
         <div>
-          <span className="text-[#DFC173] text-xs font-bold uppercase tracking-[0.3em]">
+          <span className="text-[#DFC173] text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em]">
             {t('showcase.galeria.titulo')}
           </span>
           <div className="mt-3 h-px w-16 bg-[#DFC173]/50" />
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3 sm:gap-5 shrink-0">
           <div className="flex items-baseline font-serif text-white tabular-nums" aria-hidden="true">
-            <span className="relative inline-flex overflow-hidden h-[1.15em] text-3xl md:text-4xl leading-none">
+            <span className="relative inline-flex overflow-hidden h-[1.15em] text-2xl sm:text-3xl md:text-4xl leading-none">
               <AnimatePresence mode="popLayout" initial={false} custom={direction}>
                 <motion.span
                   key={index}
@@ -148,7 +151,7 @@ export default function ProjectGallery() {
                 </motion.span>
               </AnimatePresence>
             </span>
-            <span className="text-neutral-500 text-sm ml-2">/ {pad(SLIDES.length)}</span>
+            <span className="text-neutral-500 text-xs sm:text-sm ml-1.5 sm:ml-2 whitespace-nowrap">/ {pad(SLIDES.length)}</span>
           </div>
 
           <div className="flex gap-2">
@@ -161,7 +164,7 @@ export default function ProjectGallery() {
                 type="button"
                 onClick={b.fn}
                 aria-label={b.label}
-                className="group relative w-11 h-11 rounded-full border border-white/15 text-white overflow-hidden cursor-pointer"
+                className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-white/15 text-white overflow-hidden cursor-pointer"
               >
                 {/* Relleno dorado que crece desde el centro al pasar el mouse */}
                 <span className="absolute inset-0 rounded-full bg-[#DFC173] scale-0 group-hover:scale-100 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
@@ -201,7 +204,7 @@ export default function ProjectGallery() {
               animate={{ scale: 1 }}
               transition={{ duration: reduce ? 0 : DURATION / 1000 + 1.5, ease: 'easeOut' }}
             >
-              <StripImage src={slide.src} alt={title} direction={direction} reduce={reduce} />
+              {nearView && <StripImage src={slide.src} alt={title} direction={direction} reduce={reduce} />}
             </motion.div>
           </motion.div>
         </AnimatePresence>

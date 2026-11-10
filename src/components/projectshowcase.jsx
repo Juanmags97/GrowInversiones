@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import logoNuevo from '../../public/gsNuevo.png';
 import logoArriba from '../../public/gw-del-sol.png';
 import video from '../../public/VideoHorizontal.mp4';
+import videoPoster from '../../public/VideoHorizontal-poster.webp';
 import ProjectGallery from './ProjectGallery';
 import ObraSection from './ObraSection';
 
@@ -291,7 +292,7 @@ export default function ProjectShowcase() {
             viewport={{ once: true }}
             className="relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1E3957] aspect-video w-full"
           >
-            <video src={video} controls className="w-full h-full object-cover" />
+            <video src={video} poster={videoPoster} controls playsInline preload="none" className="w-full h-full object-cover" />
           </motion.div>
         </div>
 

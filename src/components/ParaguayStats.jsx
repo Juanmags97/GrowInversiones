@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import fondo from '../../public/FondoStats.png';
+import fondo from '../../public/FondoStats.webp';
 
 // Componente animado para la métrica 1 (+4,5%)
 function CounterPBI() {
@@ -17,7 +17,7 @@ function CounterPBI() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-[22px] sm:text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
 }
 
 // Componente animado para la métrica 2 (+USD 1.200 M)
@@ -34,7 +34,7 @@ function CounterInversion() {
     }
   }, [isInView]);
 
-  return <motion.span ref={nodeRef} className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
+  return <motion.span ref={nodeRef} className="text-[22px] sm:text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">{rounded}</motion.span>;
 }
 
 export default function ParaguayStats() {
@@ -65,7 +65,7 @@ export default function ParaguayStats() {
         </div>
 
         {/* COLUMNA DERECHA: LAS 4 MÉTRICAS EN HORIZONTAL */}
-        <div className="grid grid-cols-2 gap-10 md:flex md:gap-8 xl:gap-12 pt-2">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:gap-10 md:flex md:gap-8 xl:gap-12 pt-2">
 
           <div className='hidden border border-white/30 w-0 md:block'></div>
           
@@ -112,7 +112,7 @@ export default function ParaguayStats() {
             transition={{ duration: 0.5 }}
             className="group flex flex-col gap-3 cursor-default flex-1"
           >
-            <span className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">2°</span>
+            <span className="text-[22px] sm:text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">2°</span>
             <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.rentabilidad')}
             </p>
@@ -129,7 +129,7 @@ export default function ParaguayStats() {
             transition={{ duration: 0.5 }}
             className="group flex flex-col gap-3 cursor-default flex-1"
           >
-            <span className="text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">Top 10</span>
+            <span className="text-[22px] sm:text-2xl lg:text-[28px] 2xl:text-[40px] font-bold text-white block whitespace-nowrap drop-shadow-lg">Top 10</span>
             <p className="text-sm md:text-base text-white/90 font-semibold tracking-wider uppercase leading-snug max-w-[16rem] drop-shadow-md">
               {t('stats.calidadVida')}
             </p>

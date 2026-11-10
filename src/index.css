@@ -91,3 +91,15 @@ h4,
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
+
+/* Evita el desplazamiento horizontal en celulares cuando algo entra animado desde el costado */
+html,
+body {
+  overflow-x: hidden;
+}
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
